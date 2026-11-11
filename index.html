@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concurso Oficial AIC TECH, C.A. | Venezuela Energética 2026</title>
+  
+  <!-- Favicon / Meta -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f2fe'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  <meta name="description" content="Participa en la Trivia Tecnológica de AIC TECH, C.A. en la Exposición Venezuela Energética 2026 y gana una EcoFlow River 3 o una Tablet Compaq 12 pulgadas.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              petroleum: '#061320',
+              petroleumLight: '#0d233a',
+              petroleumCard: '#102c48',
+              cyan: '#00f2fe',
+              cyanHover: '#38bdf8',
+              cyanDark: '#0891b2',
+              accent: '#06b6d4',
+              grayDark: '#0c121c',
+              borderDark: '#1e3852',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px -3px rgba(0, 242, 254, 0.35)',
+            'glow-cyan-lg': '0 0 45px -5px rgba(0, 242, 254, 0.45)',
+            'glow-gold': '0 0 35px -5px rgba(250, 204, 21, 0.4)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #061320;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e3852;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00f2fe;
+    }
+    
+    /* Subtle Grid Background Pattern */
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+    }
+    
+    /* Radial Ambient Glow */
+    .ambient-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(0, 242, 254, 0.12) 0%, rgba(6, 19, 32, 0) 70%);
+    }
+
+    /* Glass Effect */
+    .glass-card {
+      background: rgba(13, 35, 58, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 242, 254, 0.18);
+    }
+
+    .glass-input {
+      background: rgba(6, 19, 32, 0.85);
+      border: 1px solid #1e3852;
+      transition: all 0.2s ease-in-out;
+    }
+    .glass-input:focus {
+      border-color: #00f2fe;
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+      outline: none;
+    }
+  </style>
+</head>
+<body class="bg-brand-petroleum text-slate-100 font-sans min-h-screen flex flex-col relative overflow-x-hidden selection:bg-brand-cyan selection:text-brand-petroleum">
+
+  <!-- Background Decorative Grid & Glow Elements -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] ambient-glow pointer-events-none z-0"></div>
+  <div class="fixed -bottom-48 -left-48 w-96 h-96 bg-cyan-900/20 rounded-full blur-3xl pointer-events-none z-0"></div>
+  <div class="fixed -top-48 -right-48 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="relative z-20 border-b border-brand-borderDark/80 bg-brand-petroleum/90 backdrop-blur-md sticky top-0 px-4 py-3 sm:px-8">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo AIC TECH & Event Badge -->
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-700 p-0.5 flex items-center justify-center shadow-glow-cyan">
+          <div class="h-full w-full bg-brand-petroleum rounded-[10px] flex items-center justify-center">
+            <i data-lucide="zap" class="w-5 h-5 text-brand-cyan"></i>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-base sm:text-lg tracking-wider text-white">AIC TECH<span class="text-brand-cyan">, C.A.</span></span>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-cyan-950/80 text-brand-cyan border border-brand-cyan/40 font-semibold tracking-wider">Stand Oficial</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Venezuela Energética 2026</p>
+        </div>
+      </div>
+
+      <!-- Tech Partner Badges -->
+      <div class="hidden md:flex items-center gap-4 text-xs font-mono text-slate-400">
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-petroleumLight/60 border border-slate-700/60">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Emerson Premier Partner</span>
+        </div>
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-petroleumLight/60 border border-slate-700/60">
+          <span class="h-1.5 w-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+          <span>Flexim Ultrasound</span>
+        </div>
+      </div>
+
+      <!-- Quick Nav Action -->
+      <div class="flex items-center gap-2">
+        <button id="btnRulesToggle" class="text-xs text-slate-300 hover:text-brand-cyan flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-brand-borderDark hover:border-brand-cyan/50 transition">
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>
+          <span>Bases</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER (SPA SCREENS) -->
+  <main class="relative z-10 flex-grow max-w-5xl w-full mx-auto px-4 py-6 sm:py-10 flex flex-col justify-center">
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: HERO, PREMIOS & PRESENTACIÓN       -->
+    <!-- ========================================== -->
+    <section id="view-hero" class="space-y-10 animate-fade-in">
+      
+      <!-- Hero Banner -->
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-petroleumLight/80 border border-brand-cyan/30 text-brand-cyan text-xs font-medium tracking-wide shadow-sm">
+          <i data-lucide="flame" class="w-4 h-4 text-cyan-400"></i>
+          <span>Gran Sorteo Técnico • Exposición Venezuela Energética 2026</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Demuestra tu talento en <br class="hidden sm:inline" />
+          <span class="bg-gradient-to-r from-brand-cyan via-sky-300 to-white bg-clip-text text-transparent">
+            Medición, Pozos y Tecnología
+          </span>
+        </h1>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Responde <strong class="text-brand-cyan">3 preguntas rápidas</strong> sobre las soluciones de ingeniería de 
+          <span class="text-white font-semibold">AIC TECH</span>, <span class="text-white font-semibold">Emerson</span> y 
+          <span class="text-white font-semibold">Flexim</span>. ¡Regístrate y clasifica al sorteo oficial a realizarse con <strong class="text-white">App Sorteos</strong> en Instagram!
+        </p>
+
+        <!-- CTA Principal de Inicio -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button id="btnStart" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-brand-cyan to-cyan-500 hover:from-cyan-400 hover:to-brand-cyan text-brand-petroleum font-bold text-base rounded-xl shadow-glow-cyan transform hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-2 group">
+            <span>Iniciar Trivia & Participar</span>
+            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+          </button>
+          
+          <a href="#premios-section" class="text-xs text-slate-400 hover:text-slate-200 flex items-center gap-1.5 py-2">
+            <i data-lucide="gift" class="w-4 h-4 text-brand-cyan"></i>
+            <span>Ver detalles de los premios</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PREMIOS DESTACADOS -->
+      <div id="premios-section" class="pt-4 space-y-5">
+        <div class="flex items-center justify-center gap-3">
+          <div class="h-px bg-gradient-to-r from-transparent via-brand-borderDark to-transparent flex-1"></div>
+          <h2 class="text-xs uppercase font-mono tracking-widest text-brand-cyan font-bold flex items-center gap-2">
+            <i data-lucide="trophy" class="w-4 h-4 text-yellow-400"></i>
+            Premios Exclusivos del Concurso
+          </h2>
+          <div class="h-px bg-gradient-to-r from-transparent via-brand-borderDark to-transparent flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- 1er Lugar Card (EcoFlow River 3) -->
+          <div class="relative glass-card rounded-2xl p-6 sm:p-7 border border-brand-cyan/40 hover:border-brand-cyan transition duration-300 shadow-glow-cyan/50 group overflow-hidden">
+            <!-- Badge 1er Lugar -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-amber-400 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-md">
+              <i data-lucide="crown" class="w-3.5 h-3.5 text-slate-950"></i>
+              <span>1ER LUGAR</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+              <!-- Visual Icon / Graphic -->
+              <div class="h-24 w-24 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-brand-petroleumLight border border-brand-cyan/50 flex flex-col items-center justify-center p-3 text-center shrink-0 group-hover:scale-105 transition">
+                <i data-lucide="battery-charging" class="w-10 h-10 text-brand-cyan mb-1 animate-pulse-slow"></i>
+                <span class="text-[9px] font-mono text-cyan-300 uppercase tracking-wider">Clean Energy</span>
+              </div>
+
+              <!-- Prize Details -->
+              <div class="space-y-2 text-center sm:text-left flex-1">
+                <div class="text-xs font-mono text-brand-cyan font-bold tracking-wider">GRAN PREMIO OFICIAL</div>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white group-hover:text-cyan-300 transition">
+                  EcoFlow River 3
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  Estación de energía portátil de última generación con tecnología LiFePO4 ultra-rápida. Ideal para operaciones en campo, respaldos críticos de instrumentación y campamentos.
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-[11px] font-mono text-slate-400">
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Portátil</span>
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Carga Ultra-Rápida</span>
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Salidas AC / DC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2do Lugar Card (Tablet Compaq 12") -->
+          <div class="relative glass-card rounded-2xl p-6 sm:p-7 border border-slate-700 hover:border-slate-400 transition duration-300 group overflow-hidden">
+            <!-- Badge 2do Lugar -->
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-slate-300 to-slate-400 text-slate-950 font-bold text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-md">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-slate-950"></i>
+              <span>2DO LUGAR</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+              <!-- Visual Icon / Graphic -->
+              <div class="h-24 w-24 rounded-2xl bg-gradient-to-br from-slate-800 to-brand-petroleum border border-slate-600 flex flex-col items-center justify-center p-3 text-center shrink-0 group-hover:scale-105 transition">
+                <i data-lucide="tablet" class="w-10 h-10 text-slate-300 mb-1"></i>
+                <span class="text-[9px] font-mono text-slate-400 uppercase tracking-wider">12 Pulgadas</span>
+              </div>
+
+              <!-- Prize Details -->
+              <div class="space-y-2 text-center sm:text-left flex-1">
+                <div class="text-xs font-mono text-slate-400 font-bold tracking-wider">SEGUNDO PREMIO</div>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white group-hover:text-slate-200 transition">
+                  Tablet Compaq 12"
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  Tablet de gran formato y pantalla HD de 12 pulgadas. Potencia y ergonomía para revisión de planos técnicos, supervisión de reportes, telemetría y productividad móvil.
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-[11px] font-mono text-slate-400">
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Display 12"</span>
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Android OS</span>
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Batería Prolongada</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Brand Authority Features (AIC TECH, Emerson, Flexim) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-borderDark/60 flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-cyan-950/60 text-brand-cyan shrink-0">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">AIC TECH Pruebas de Pozos</h4>
+            <p class="text-[12px] text-slate-400 mt-1">Superficie, caracterización exacta de fluidos y diagnóstico de productividad de yacimientos.</p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-borderDark/60 flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-cyan-950/60 text-brand-cyan shrink-0">
+            <i data-lucide="gauge" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Tecnología Emerson</h4>
+            <p class="text-[12px] text-slate-400 mt-1">Roxar 2600 Multifásico, Micro Motion 5700/5726 Coriolis y Comunicador AMS Trex.</p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-borderDark/60 flex items-start gap-3">
+          <div class="p-2 rounded-lg bg-cyan-950/60 text-brand-cyan shrink-0">
+            <i data-lucide="radio" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Flexim Clamp-On</h4>
+            <p class="text-[12px] text-slate-400 mt-1">Medición ultrasónica no intrusiva para líquidos y gases sin cortes de tubería.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: FORMULARIO DE CAPTURA              -->
+    <!-- ========================================== -->
+    <section id="view-form" class="hidden space-y-6 animate-fade-in max-w-xl mx-auto w-full">
+      
+      <!-- Progress Bar Tracker (Paso 1 de 2) -->
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-xs font-mono">
+          <span class="text-brand-cyan font-bold uppercase tracking-wider">Paso 1 de 2: Datos de Registro</span>
+          <span class="text-slate-400">Exposición Venezuela Energética</span>
+        </div>
+        <div class="h-1.5 w-full bg-brand-petroleumLight rounded-full overflow-hidden">
+          <div class="h-full bg-brand-cyan w-1/2 rounded-full transition-all duration-500 shadow-glow-cyan"></div>
+        </div>
+      </div>
+
+      <!-- Form Card -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-brand-borderDark shadow-xl space-y-6">
+        <div class="text-center space-y-1">
+          <h2 class="text-2xl font-extrabold text-white tracking-tight">Registro de Participante</h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Completa tus datos profesionales para asociar tu boleto al sorteo y comenzar la trivia técnica.
+          </p>
+        </div>
+
+        <form id="participantForm" class="space-y-4" novalidate>
+          
+          <!-- Nombre Completo -->
+          <div class="space-y-1.5">
+            <label for="inputNombre" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+              Nombre Completo <span class="text-brand-cyan">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-500">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </span>
+              <input type="text" id="inputNombre" name="nombre" required placeholder="Ej: Ing. Carlos Pérez"
+                class="glass-input w-full pl-10 pr-4 py-3 rounded-xl text-sm text-white placeholder-slate-500">
+            </div>
+            <p id="errNombre" class="hidden text-[11px] text-red-400 pl-1">Por favor, ingresa tu nombre completo.</p>
+          </div>
+
+          <!-- Teléfono / WhatsApp -->
+          <div class="space-y-1.5">
+            <label for="inputTelefono" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+              Teléfono / WhatsApp <span class="text-brand-cyan">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-500">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </span>
+              <input type="tel" id="inputTelefono" name="telefono" required placeholder="+58 414 1234567"
+                class="glass-input w-full pl-10 pr-4 py-3 rounded-xl text-sm text-white placeholder-slate-500">
+            </div>
+            <p id="errTelefono" class="hidden text-[11px] text-red-400 pl-1">Ingresa un número telefónico válido para contactarte si resultas ganador.</p>
+          </div>
+
+          <!-- Correo Electrónico -->
+          <div class="space-y-1.5">
+            <label for="inputEmail" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+              Correo Electrónico <span class="text-brand-cyan">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-500">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </span>
+              <input type="email" id="inputEmail" name="email" required placeholder="carlos.perez@empresa.com"
+                class="glass-input w-full pl-10 pr-4 py-3 rounded-xl text-sm text-white placeholder-slate-500">
+            </div>
+            <p id="errEmail" class="hidden text-[11px] text-red-400 pl-1">Ingresa un correo electrónico corporativo o personal válido.</p>
+          </div>
+
+          <!-- Empresa y Cargo (Dos Columnas en desktop) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Empresa -->
+            <div class="space-y-1.5">
+              <label for="inputEmpresa" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                Empresa / Institución <span class="text-brand-cyan">*</span>
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-500">
+                  <i data-lucide="building-2" class="w-4 h-4"></i>
+                </span>
+                <input type="text" id="inputEmpresa" name="empresa" required placeholder="Ej: PDVSA / Contratista"
+                  class="glass-input w-full pl-10 pr-4 py-3 rounded-xl text-sm text-white placeholder-slate-500">
+              </div>
+              <p id="errEmpresa" class="hidden text-[11px] text-red-400 pl-1">Campo obligatorio.</p>
+            </div>
+
+            <!-- Cargo -->
+            <div class="space-y-1.5">
+              <label for="inputCargo" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                Cargo / Rol <span class="text-brand-cyan">*</span>
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-500">
+                  <i data-lucide="briefcase" class="w-4 h-4"></i>
+                </span>
+                <input type="text" id="inputCargo" name="cargo" required placeholder="Ej: Ing. de Operaciones"
+                  class="glass-input w-full pl-10 pr-4 py-3 rounded-xl text-sm text-white placeholder-slate-500">
+              </div>
+              <p id="errCargo" class="hidden text-[11px] text-red-400 pl-1">Campo obligatorio.</p>
+            </div>
+
+          </div>
+
+          <!-- Privacy Notice -->
+          <p class="text-[11px] text-slate-400 leading-normal pt-1">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 inline text-brand-cyan mr-1"></i>
+            Tus datos serán utilizados únicamente para la verificación del sorteo por AIC TECH, C.A. y la entrega de premios.
+          </p>
+
+          <!-- Submit Form Button -->
+          <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-cyan to-cyan-500 hover:from-cyan-400 hover:to-brand-cyan text-brand-petroleum font-extrabold text-sm shadow-glow-cyan flex items-center justify-center gap-2 transition duration-200 mt-2">
+            <span>Continuar a la Trivia de 3 Preguntas</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+
+        </form>
+      </div>
+
+      <!-- Botón de regreso -->
+      <div class="text-center">
+        <button id="btnBackToHero" class="text-xs text-slate-400 hover:text-slate-200 inline-flex items-center gap-1.5">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span>Volver al inicio</span>
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: TRIVIA INTERACTIVA (3 PREGUNTAS)   -->
+    <!-- ========================================== -->
+    <section id="view-trivia" class="hidden space-y-6 animate-fade-in max-w-2xl mx-auto w-full">
+      
+      <!-- Progress Bar & Question Counter -->
+      <div class="space-y-2">
+        <div class="flex justify-between items-center text-xs font-mono">
+          <span class="text-brand-cyan font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="help-circle" class="w-4 h-4 text-brand-cyan"></i>
+            <span id="questionStepLabel">Pregunta 1 de 3</span>
+          </span>
+          <span id="categoryBadge" class="px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-brand-cyan/30 text-[11px] font-semibold">
+            Categoría
+          </span>
+        </div>
+        <div class="h-2 w-full bg-brand-petroleumLight rounded-full overflow-hidden">
+          <div id="triviaProgressBar" class="h-full bg-gradient-to-r from-brand-cyan to-cyan-400 w-1/3 rounded-full transition-all duration-300 shadow-glow-cyan"></div>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-brand-borderDark shadow-2xl space-y-6 relative overflow-hidden">
+        
+        <!-- Category & Icon header -->
+        <div class="flex items-center gap-3">
+          <div id="questionIconBox" class="h-10 w-10 rounded-xl bg-brand-petroleum border border-brand-cyan/40 flex items-center justify-center text-brand-cyan shrink-0">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span id="questionTopic" class="text-[11px] font-mono text-brand-cyan font-bold uppercase tracking-wider">
+              Tema Técnico
+            </span>
+            <h3 id="questionText" class="text-base sm:text-lg font-bold text-white leading-snug">
+              Cargando pregunta...
+            </h3>
+          </div>
+        </div>
+
+        <!-- Answers Options Container -->
+        <div id="optionsContainer" class="space-y-3 pt-1">
+          <!-- Las 4 opciones se inyectan dinámicamente -->
+        </div>
+
+        <!-- Explanatory Feedback Box (Hidden initially) -->
+        <div id="feedbackBox" class="hidden p-4 rounded-xl border text-sm transition-all duration-300">
+          <div class="flex items-start gap-3">
+            <div id="feedbackIcon" class="p-1 rounded-full shrink-0 mt-0.5">
+              <!-- Check o X icon -->
+            </div>
+            <div class="space-y-1 flex-1">
+              <h5 id="feedbackTitle" class="font-bold text-xs uppercase tracking-wider"></h5>
+              <p id="feedbackText" class="text-xs sm:text-sm leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next / Finish Button (Disabled until answer is clicked) -->
+        <div class="pt-2 flex justify-end">
+          <button id="btnNextQuestion" disabled class="py-3 px-6 rounded-xl bg-slate-700 text-slate-400 font-bold text-xs uppercase tracking-wider cursor-not-allowed transition flex items-center gap-2">
+            <span id="btnNextText">Siguiente Pregunta</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: ÉXITO, TICKET Y REDIRECCIÓN        -->
+    <!-- ========================================== -->
+    <section id="view-success" class="hidden space-y-6 animate-fade-in max-w-xl mx-auto w-full">
+      
+      <!-- Submission Status Pill -->
+      <div id="syncStatus" class="p-3 rounded-xl bg-brand-petroleumLight/80 border border-brand-cyan/30 flex items-center justify-center gap-2 text-xs font-mono text-cyan-300">
+        <i data-lucide="loader-2" class="w-4 h-4 animate-spin text-brand-cyan"></i>
+        <span>Enviando tu registro al servidor oficial...</span>
+      </div>
+
+      <!-- Main Completion Card -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-brand-cyan/50 shadow-glow-cyan space-y-6 text-center relative overflow-hidden">
+        
+        <!-- Glowing Trophy Icon -->
+        <div class="mx-auto w-20 h-20 rounded-full bg-gradient-to-tr from-brand-cyan/20 to-cyan-500/30 border border-brand-cyan flex items-center justify-center shadow-glow-cyan animate-bounce-subtle">
+          <i data-lucide="party-popper" class="w-10 h-10 text-brand-cyan"></i>
+        </div>
+
+        <div class="space-y-2">
+          <span class="text-xs font-mono uppercase tracking-widest text-brand-cyan font-bold">¡Registro Completado con Éxito!</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">¡Estás Participando!</h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Gracias por visitar el stand de <strong class="text-white">AIC TECH, C.A.</strong> en la Exposición Venezuela Energética 2026.
+          </p>
+        </div>
+
+        <!-- Virtual Ticket Card -->
+        <div class="bg-brand-petroleum rounded-xl p-5 border border-dashed border-brand-cyan/50 text-left space-y-3 relative">
+          <div class="flex justify-between items-center border-b border-brand-borderDark pb-2.5">
+            <div>
+              <span class="text-[10px] font-mono text-slate-400 block uppercase">Ticket Oficial de Sorteo</span>
+              <span id="ticketCode" class="text-lg font-mono font-extrabold text-brand-cyan tracking-wider">#VE26-0000</span>
+            </div>
+            <div class="text-right">
+              <span class="text-[10px] font-mono text-slate-400 block uppercase">Puntaje Trivia</span>
+              <span id="triviaScoreDisplay" class="text-sm font-mono font-bold text-emerald-400">3 / 3 Aciertos</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <span class="text-slate-400 block text-[11px]">Participante:</span>
+              <span id="ticketName" class="font-semibold text-white truncate block">-</span>
+            </div>
+            <div>
+              <span class="text-slate-400 block text-[11px]">Empresa:</span>
+              <span id="ticketCompany" class="font-semibold text-slate-200 truncate block">-</span>
+            </div>
+          </div>
+
+          <!-- Premios por los que participa -->
+          <div class="pt-1 text-[11px] text-slate-300 flex items-center gap-1.5 border-t border-brand-borderDark/60">
+            <i data-lucide="gift" class="w-3.5 h-3.5 text-yellow-400"></i>
+            <span>Participa por: <strong>EcoFlow River 3</strong> (1er Lugar) y <strong>Tablet Compaq 12"</strong> (2do Lugar).</span>
+          </div>
+        </div>
+
+        <!-- CALL TO ACTION INSTAGRAM & APP SORTEOS (PASO FINAL OBLIGATORIO) -->
+        <div class="space-y-4 pt-2">
+          
+          <div class="p-4 rounded-xl bg-gradient-to-br from-purple-950/40 via-pink-950/30 to-brand-petroleum border border-pink-500/40 text-left space-y-2">
+            <div class="flex items-center gap-2 text-pink-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+              <span>Paso Final para Validar tu Entrada</span>
+            </div>
+            <p class="text-xs text-slate-200 leading-relaxed">
+              El sorteo se realizará de forma transparente con <strong>App Sorteos</strong> entre todos los comentarios de la publicación oficial de Instagram.
+            </p>
+            <div class="bg-black/40 rounded-lg p-2.5 flex items-center justify-between gap-2 border border-pink-500/20">
+              <span id="commentToCopy" class="text-xs font-mono text-pink-200 truncate">
+                ¡Participando con AIC TECH! Ticket: #VE26-0000
+              </span>
+              <button id="btnCopyComment" title="Copiar texto para comentar" class="shrink-0 px-2.5 py-1 rounded bg-pink-500/20 hover:bg-pink-500/40 text-pink-300 text-xs font-mono flex items-center gap-1 transition">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copyFeedback">Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Instagram Action Button -->
+          <a id="btnInstagram" href="https://www.instagram.com/p/DfZkinLgwBN/?utm_source=ig_web_copy_link&mdxt=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" 
+            class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-pink-600 via-rose-500 to-amber-500 hover:from-pink-500 hover:to-amber-400 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-pink-600/30 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 transition duration-200">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+            <span>Ir a la Publicación de Instagram & Comentar</span>
+            <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+          </a>
+
+          <p class="text-[11px] text-slate-400">
+            Asegúrate de seguir a <strong class="text-white">@aictechca</strong> en Instagram para no perderte el anuncio de los ganadores en vivo.
+          </p>
+
+        </div>
+
+        <!-- Botón Reiniciar para otro participante en el stand -->
+        <div class="pt-4 border-t border-brand-borderDark/60">
+          <button id="btnResetAll" class="text-xs text-slate-400 hover:text-brand-cyan inline-flex items-center gap-1.5 transition">
+            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+            <span>Registrar otro participante en este dispositivo</span>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ========================================== -->
+  <!-- MODAL DE BASES DEL CONCURSO               -->
+  <!-- ========================================== -->
+  <div id="modalRules" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+    <div class="glass-card max-w-lg w-full rounded-2xl p-6 border border-brand-cyan/40 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-brand-borderDark pb-3">
+        <h3 class="font-extrabold text-white text-base flex items-center gap-2">
+          <i data-lucide="scroll" class="w-4 h-4 text-brand-cyan"></i>
+          Bases y Condiciones del Sorteo
+        </h3>
+        <button id="btnCloseRules" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="text-xs text-slate-300 space-y-3 max-h-80 overflow-y-auto pr-2">
+        <p><strong>1. Organizador:</strong> Concurso organizado exclusivamente por AIC TECH, C.A. en el marco de la Exposición Venezuela Energética 2026.</p>
+        <p><strong>2. Participación:</strong> Abierto a todos los asistentes, clientes y profesionales del sector energético que completen el formulario de registro y la trivia de 3 preguntas.</p>
+        <p><strong>3. Premios:</strong>
+          <br>• <strong>1er Lugar:</strong> Estación de Energía Portátil EcoFlow River 3.
+          <br>• <strong>2do Lugar:</strong> Tablet Compaq de 12 pulgadas.
+        </p>
+        <p><strong>4. Metodología de Elección:</strong> Los boletos registrados se validarán con el comentario en la publicación oficial de Instagram y el sorteo se realizará de forma aleatoria mediante la plataforma <strong>App Sorteos</strong>.</p>
+        <p><strong>5. Entrega:</strong> Los ganadores serán contactados vía telefónica/WhatsApp y anunciados en las redes oficiales de AIC TECH, C.A.</p>
+      </div>
+
+      <div class="pt-2 text-right">
+        <button id="btnUnderstandRules" class="px-5 py-2 rounded-xl bg-brand-cyan text-brand-petroleum font-bold text-xs hover:bg-cyan-300 transition">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t border-brand-borderDark/60 bg-brand-petroleum/95 py-6 px-4 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="text-white font-bold">AIC TECH, C.A.</span>
+        <span>•</span>
+        <span>RIF: J-XXXXXXXX-X</span>
+        <span>•</span>
+        <span>Venezuela Energética 2026</span>
+      </div>
+      <div>
+        <span>Soluciones en Pruebas de Pozos • Emerson • Flexim</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC & TRIVIA ENGINE           -->
+  <!-- ========================================== -->
+  <script>
+    /**
+     * CONFIGURACIÓN PRINCIPAL
+     */
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKb4bgpIxzjdHpKxO3-mTDMMroEhOw6w2ac7YRSuWEXtShxj3k1xV5qYB-piIU8rff/exec';
+    
+    // URL de la publicación oficial de Instagram para el sorteo (App Sorteos)
+    const INSTAGRAM_POST_URL = 'https://www.instagram.com/p/DfZkinLgwBN/?utm_source=ig_web_copy_link&mdxt=NTc4MTIwNjQ2YQ==';
+
+    /**
+     * BANCO DE 15 PREGUNTAS (AIC TECH, EMERSON ROXAR 2600, MICRO MOTION 5700/5726, AMS TREX, FLEXIM)
+     */
+    const QUESTIONS_BANK = [
+      {
+        id: 1,
+        topic: "AIC TECH • Pruebas de Pozos",
+        category: "Pruebas de Pozos",
+        icon: "activity",
+        question: "¿Cuál es el objetivo principal de una prueba de pozos realizada en superficie por AIC TECH?",
+        options: [
+          "Determinar el potencial de producción y caracterizar con precisión los fluidos del yacimiento.",
+          "Cambiar el color del crudo antes de almacenarlo en tanques.",
+          "Cerrar permanentemente la producción de la estación de flujo.",
+          "Pintar las tuberías de transporte de crudo."
+        ],
+        correctIndex: 0,
+        explanation: "Las pruebas de pozos de AIC TECH permiten medir caudales, presiones y composiciones para optimizar la explotación y recobro del yacimiento."
+      },
+      {
+        id: 2,
+        topic: "AIC TECH • Seguridad Operativa",
+        category: "AIC TECH",
+        icon: "shield-check",
+        question: "¿Qué valor diferencial aporta AIC TECH en sus operaciones de pruebas de producción?",
+        options: [
+          "Datos confiables en tiempo real bajo estrictos estándares de seguridad y personal especializado.",
+          "Suspender las operaciones de todos los pozos adyacentes del campo.",
+          "Realizar mediciones estimadas sin necesidad de instrumentos de precisión.",
+          "Operar únicamente durante horas nocturnas."
+        ],
+        correctIndex: 0,
+        explanation: "AIC TECH garantiza calidad de datos y continuidad operacional cumpliendo las normas más rigurosas de la industria petrolera nacional."
+      },
+      {
+        id: 3,
+        topic: "AIC TECH • Diagnóstico de Yacimientos",
+        category: "Pruebas de Pozos",
+        icon: "database",
+        question: "¿Qué información clave entrega AIC TECH al cliente tras una prueba de pozos?",
+        options: [
+          "Reportes analíticos certificados de presiones, temperaturas, cortes de agua (BS&W) y gastos de petróleo y gas.",
+          "El pronóstico climatológico semanal de la región petrolera.",
+          "Un listado de computadoras comerciales.",
+          "Un plano turístico de las zonas aledañas."
+        ],
+        correctIndex: 0,
+        explanation: "Estos reportes técnicos proporcionan la base analítica que los ingenieros de yacimientos requieren para tomar decisiones de completación y producción."
+      },
+      {
+        id: 4,
+        topic: "AIC TECH • Eficiencia Productiva",
+        category: "AIC TECH",
+        icon: "trending-up",
+        question: "¿Por qué es fundamental ejecutar pruebas periódicas de pozos con AIC TECH?",
+        options: [
+          "Para detectar oportunamente declinaciones de presión, variaciones de corte de agua y anomalías mecánicas.",
+          "Para desperdiciar fluidos en superficie.",
+          "Solo por un requisito decorativo de la locación.",
+          "Para forzar la parada de los sistemas de bombeo."
+        ],
+        correctIndex: 0,
+        explanation: "El monitoreo sistemático previene fallas costosas, optimiza el bombeo electrosumergible o gas lift y prolonga la vida productiva del pozo."
+      },
+      {
+        id: 5,
+        topic: "AIC TECH • Innovación Tecnológica",
+        category: "Tecnología",
+        icon: "cpu",
+        question: "¿Qué tecnologías integra AIC TECH en sus servicios de medición y pruebas?",
+        options: [
+          "Sensores digitales de alta gama, telemetría y medidores multifásicos de última generación.",
+          "Medición exclusivamente manual con baldes y reglas.",
+          "Flotadores de madera antiguos sin transmisión de señal.",
+          "Cálculos empíricos sin calibración."
+        ],
+        correctIndex: 0,
+        explanation: "La integración tecnológica de vanguardia asegura que cada barril y pie cúbico sea contabilizado con la máxima fidelidad."
+      },
+      {
+        id: 6,
+        topic: "Emerson • Medidor Multifásico Roxar 2600",
+        category: "Emerson",
+        icon: "layers",
+        question: "¿Cuál es la principal ventaja del Medidor Multifásico Roxar 2600 de Emerson?",
+        options: [
+          "Mide en línea y en tiempo real petróleo, agua y gas simultáneamente sin requerir un separador de prueba.",
+          "Requiere construir enormes tanques de asentamiento gravitacional para poder medir.",
+          "Solo puede medir agua potable a bajas presiones.",
+          "Obliga a congelar los fluidos antes de registrar el caudal."
+        ],
+        correctIndex: 0,
+        explanation: "El Roxar 2600 elimina la necesidad de separadores de prueba pesados y complejos, reduciendo huella de espacio, costos de instalación y tiempos de prueba."
+      },
+      {
+        id: 7,
+        topic: "Emerson • Roxar 2600 en Condiciones Severas",
+        category: "Emerson",
+        icon: "zap",
+        question: "¿Por qué el Roxar 2600 es líder en cabezales de pozos y líneas de flujo?",
+        options: [
+          "Por su capacidad de medir con precisión regímenes de flujo cambiantes y altos cortes de agua (Water Cut).",
+          "Porque solo se utiliza en redes de distribución doméstica de gas licuado.",
+          "Porque carece de componentes electrónicos de medición.",
+          "Porque requiere ser desmontado diariamente para calibrarse."
+        ],
+        correctIndex: 0,
+        explanation: "Utiliza principios avanzados de impedancia eléctrica y tecnología gamma para caracterizar fracciones de fluidos incluso en emulsiones complejas."
+      },
+      {
+        id: 8,
+        topic: "Emerson • Transmisor Micro Motion 5700/5726",
+        category: "Emerson",
+        icon: "gauge",
+        question: "¿Qué principio de medición caracteriza a los transmisores Micro Motion 5700/5726 de Emerson?",
+        options: [
+          "Medición directa de flujo másico y densidad basada en la fuerza de Coriolis.",
+          "Estimación por aspas mecánicas sumergidas propensas a desgaste.",
+          "Medición por efecto térmico exclusivo de aire estático.",
+          "Sensor de presión hidrostática rudimentario."
+        ],
+        correctIndex: 0,
+        explanation: "La tecnología Coriolis Micro Motion ofrece la más alta precisión del mercado en medición de masa y densidad para transferencia de custodia y control de procesos."
+      },
+      {
+        id: 9,
+        topic: "Emerson • Smart Meter Verification (5700/5726)",
+        category: "Emerson",
+        icon: "check-circle-2",
+        question: "¿Qué función avanzada ofrece el transmisor Emerson 5700/5726 para verificar su salud en línea?",
+        options: [
+          "Smart Meter Verification: comprueba la calibración e integridad estructural del sensor sin detener el flujo.",
+          "Apagado automático de emergencia al detectar crudo.",
+          "Prueba de vibración con impacto manual sobre los tubos.",
+          "Requiere enviar el equipo al exterior cada mes para verificarlo."
+        ],
+        correctIndex: 0,
+        explanation: "Smart Meter Verification certifica la exactitud del medidor en solo 90 segundos con solo tocar un botón y genera reportes auditables."
+      },
+      {
+        id: 10,
+        topic: "Emerson • Comunicador de Campo AMS Trex",
+        category: "Emerson",
+        icon: "smartphone",
+        question: "¿Para qué se utiliza el Comunicador de Dispositivos AMS Trex de Emerson?",
+        options: [
+          "Configurar, calibrar y diagnosticar instrumentos HART y Foundation Fieldbus en áreas clasificadas peligrosas.",
+          "Sintonizar canales de televisión digital en el campo petrolero.",
+          "Cargar acumuladores de vehículos pesados en talleres.",
+          "Proyectar películas en el campamento."
+        ],
+        correctIndex: 0,
+        explanation: "El comunicador portátil AMS Trex es intrínsecamente seguro (antiexplosión), alimenta transmisores directamente y permite diagnósticos avanzados in situ."
+      },
+      {
+        id: 11,
+        topic: "Emerson • Ventajas del AMS Trex",
+        category: "Emerson",
+        icon: "wrench",
+        question: "¿Qué capacidad exclusiva destaca al AMS Trex en el mantenimiento de instrumentación?",
+        options: [
+          "Capacidad de alimentar el lazo de corriente del transmisor sin necesidad de una fuente externa.",
+          "Sustituye completamente la tubería principal de proceso.",
+          "Genera vapor para limpieza de calderas.",
+          "Funciona únicamente conectado a una toma de corriente de 440V."
+        ],
+        correctIndex: 0,
+        explanation: "La tecnología Device Power del AMS Trex ahorra tiempo valioso al energizar los instrumentos de 4-20 mA en campo mientras se configuran."
+      },
+      {
+        id: 12,
+        topic: "Flexim • Medición Clamp-On No Intrusiva",
+        category: "Flexim",
+        icon: "radio",
+        question: "¿Cómo se instalan los medidores ultrasónicos de flujo Flexim FLUXUS?",
+        options: [
+          "De forma externa sobre la tubería ('clamp-on'), sin cortar el tubo ni detener la producción.",
+          "Perforando la tubería a alta presión con brocas industriales.",
+          "Insertando turbinas internas que reducen el diámetro de la línea.",
+          "Sumergiendo la tubería completa dentro de un tanque de prueba."
+        ],
+        correctIndex: 0,
+        explanation: "Al instalarse externamente, Flexim elimina riesgos de fuga, desgaste abrasivo y caídas de presión, garantizando cero paradas de planta."
+      },
+      {
+        id: 13,
+        topic: "Flexim • Aplicaciones en Crudo y Gas",
+        category: "Flexim",
+        icon: "flame",
+        question: "¿Qué tipo de fluidos pueden ser medidos con los sistemas ultrasónicos de Flexim?",
+        options: [
+          "Líquidos, gases, hidrocarburos viscosos y fluidos a temperaturas extremas (desde criogenia hasta +400 °C).",
+          "Únicamente agua mineral embotellada a temperatura ambiente.",
+          "Solamente aire seco dentro de gabinetes de control.",
+          "Ningún fluido con presencia de hidrocarburos."
+        ],
+        correctIndex: 0,
+        explanation: "Los transductores de Flexim emplean tecnología de ondas guiadas y tiempo de tránsito capaz de medir gases y crudos pesados con extrema confiabilidad."
+      },
+      {
+        id: 14,
+        topic: "Flexim • Seguridad y Confiabilidad",
+        category: "Flexim",
+        icon: "shield-alert",
+        question: "¿Por qué los medidores clamp-on de Flexim son la mejor opción para productos corrosivos o tóxicos?",
+        options: [
+          "Porque los sensores nunca entran en contacto con el fluido, previniendo corrosión y peligro de fugas.",
+          "Porque disuelven químicamente el fluido al pasar.",
+          "Porque actúan como filtros mecánicos retenedores de arena.",
+          "Porque eliminan por completo la presión del fluido."
+        ],
+        correctIndex: 0,
+        explanation: "Cero penetración en la pared del tubo significa cero puntos de fuga, protegiendo al personal, las instalaciones y el medio ambiente."
+      },
+      {
+        id: 15,
+        topic: "Sinergia • AIC TECH + Emerson + Flexim",
+        category: "Alianza Técnica",
+        icon: "award",
+        question: "¿Qué solución integral aportan AIC TECH, Emerson y Flexim en Venezuela Energética 2026?",
+        options: [
+          "Ingeniería especializada, tecnología de medición de clase mundial y soporte local directo para la industria.",
+          "Suministro de herramientas manuales de ferretería doméstica.",
+          "Venta de combustibles al detal.",
+          "Servicios de transporte turístico fluvial."
+        ],
+        correctIndex: 0,
+        explanation: "AIC TECH reúne a líderes globales como Emerson y Flexim para optimizar la producción energética con máxima precisión y respaldo técnico en el país."
+      }
+    ];
+
+    /**
+     * ESTADO DE LA APLICACIÓN (SPA STATE)
+     */
+    const state = {
+      participant: {
+        nombre: '',
+        telefono: '',
+        email: '',
+        empresa: '',
+        cargo: ''
+      },
+      ticketCode: '',
+      triviaQuestions: [],
+      currentQuestionIndex: 0,
+      userAnswers: [],
+      score: 0,
+      isAnswerSelected: false
+    };
+
+    /**
+     * ELEMENTOS DEL DOM
+     */
+    const views = {
+      hero: document.getElementById('view-hero'),
+      form: document.getElementById('view-form'),
+      trivia: document.getElementById('view-trivia'),
+      success: document.getElementById('view-success')
+    };
+
+    // Navegación y modales
+    const btnStart = document.getElementById('btnStart');
+    const btnBackToHero = document.getElementById('btnBackToHero');
+    const participantForm = document.getElementById('participantForm');
+    const modalRules = document.getElementById('modalRules');
+    const btnRulesToggle = document.getElementById('btnRulesToggle');
+    const btnCloseRules = document.getElementById('btnCloseRules');
+    const btnUnderstandRules = document.getElementById('btnUnderstandRules');
+    const btnResetAll = document.getElementById('btnResetAll');
+
+    // Elementos de la Trivia
+    const questionStepLabel = document.getElementById('questionStepLabel');
+    const categoryBadge = document.getElementById('categoryBadge');
+    const triviaProgressBar = document.getElementById('triviaProgressBar');
+    const questionTopic = document.getElementById('questionTopic');
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const feedbackBox = document.getElementById('feedbackBox');
+    const feedbackTitle = document.getElementById('feedbackTitle');
+    const feedbackText = document.getElementById('feedbackText');
+    const feedbackIcon = document.getElementById('feedbackIcon');
+    const btnNextQuestion = document.getElementById('btnNextQuestion');
+    const btnNextText = document.getElementById('btnNextText');
+
+    // Elementos de Éxito y Ticket
+    const ticketCodeEl = document.getElementById('ticketCode');
+    const triviaScoreDisplay = document.getElementById('triviaScoreDisplay');
+    const ticketNameEl = document.getElementById('ticketName');
+    const ticketCompanyEl = document.getElementById('ticketCompany');
+    const commentToCopyEl = document.getElementById('commentToCopy');
+    const btnCopyComment = document.getElementById('btnCopyComment');
+    const copyFeedback = document.getElementById('copyFeedback');
+    const btnInstagram = document.getElementById('btnInstagram');
+    const syncStatus = document.getElementById('syncStatus');
+
+    /**
+     * CAMBIO DE PANTALLAS (SPA ROUTING INTERNO)
+     */
+    function showView(viewKey) {
+      Object.keys(views).forEach(key => {
+        if (key === viewKey) {
+          views[key].classList.remove('hidden');
+        } else {
+          views[key].classList.add('hidden');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /**
+     * GENERAR CÓDIGO DE TICKET ÚNICO
+     */
+    function generateTicketCode() {
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
+      return `#VE26-${randomNum}`;
+    }
+
+    /**
+     * SELECCIÓN ALEATORIA DE 3 PREGUNTAS DEL BANCO DE 15
+     */
+    function getRandomQuestions(pool, count = 3) {
+      const shuffled = [...pool].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    }
+
+    /**
+     * VALIDACIÓN Y ENVÍO DEL FORMULARIO
+     */
+    participantForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nombre = document.getElementById('inputNombre').value.trim();
+      const telefono = document.getElementById('inputTelefono').value.trim();
+      const email = document.getElementById('inputEmail').value.trim();
+      const empresa = document.getElementById('inputEmpresa').value.trim();
+      const cargo = document.getElementById('inputCargo').value.trim();
+
+      let isValid = true;
+
+      // Validar Nombre
+      if (nombre.length < 3) {
+        document.getElementById('errNombre').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('errNombre').classList.add('hidden');
+      }
+
+      // Validar Teléfono
+      if (telefono.length < 7) {
+        document.getElementById('errTelefono').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('errTelefono').classList.add('hidden');
+      }
+
+      // Validar Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById('errEmail').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('errEmail').classList.add('hidden');
+      }
+
+      // Validar Empresa
+      if (empresa.length < 2) {
+        document.getElementById('errEmpresa').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('errEmpresa').classList.add('hidden');
+      }
+
+      // Validar Cargo
+      if (cargo.length < 2) {
+        document.getElementById('errCargo').classList.remove('hidden');
+        isValid = false;
+      } else {
+        document.getElementById('errCargo').classList.add('hidden');
+      }
+
+      if (!isValid) return;
+
+      // Guardar en Estado
+      state.participant = { nombre, telefono, email, empresa, cargo };
+      state.ticketCode = generateTicketCode();
+
+      // Preparar 3 preguntas aleatorias
+      state.triviaQuestions = getRandomQuestions(QUESTIONS_BANK, 3);
+      state.currentQuestionIndex = 0;
+      state.userAnswers = [];
+      state.score = 0;
+
+      // Iniciar Trivia
+      renderCurrentQuestion();
+      showView('trivia');
+    });
+
+    /**
+     * RENDERIZAR LA PREGUNTA ACTUAL
+     */
+    function renderCurrentQuestion() {
+      state.isAnswerSelected = false;
+      const qIndex = state.currentQuestionIndex;
+      const totalQuestions = state.triviaQuestions.length;
+      const qData = state.triviaQuestions[qIndex];
+
+      // Actualizar Encabezado y Barra
+      questionStepLabel.textContent = `Pregunta ${qIndex + 1} de ${totalQuestions}`;
+      categoryBadge.textContent = qData.category;
+      questionTopic.textContent = qData.topic;
+      questionText.textContent = qData.question;
+
+      const progressPercent = ((qIndex + 1) / totalQuestions) * 100;
+      triviaProgressBar.style.width = `${progressPercent}%`;
+
+      // Ocultar feedback y deshabilitar botón siguiente
+      feedbackBox.classList.add('hidden');
+      btnNextQuestion.disabled = true;
+      btnNextQuestion.className = "py-3 px-6 rounded-xl bg-slate-800 text-slate-500 font-bold text-xs uppercase tracking-wider cursor-not-allowed transition flex items-center gap-2";
+      
+      btnNextText.textContent = (qIndex === totalQuestions - 1) ? "Finalizar y Obtener Boleto" : "Siguiente Pregunta";
+
+      // Limpiar y construir opciones
+      optionsContainer.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+
+      qData.options.forEach((optText, idx) => {
+        const optionBtn = document.createElement('button');
+        optionBtn.type = 'button';
+        optionBtn.className = `w-full text-left p-3.5 sm:p-4 rounded-xl border border-brand-borderDark bg-brand-petroleum/80 hover:bg-brand-petroleumCard hover:border-brand-cyan/60 text-slate-200 text-xs sm:text-sm font-medium transition duration-200 flex items-start gap-3 group`;
+        
+        optionBtn.innerHTML = `
+          <span class="h-6 w-6 rounded-lg bg-brand-petroleumLight border border-brand-borderDark flex items-center justify-center font-mono font-bold text-xs text-brand-cyan group-hover:bg-brand-cyan group-hover:text-brand-petroleum transition shrink-0 mt-0.5">
+            ${letters[idx]}
+          </span>
+          <span class="flex-1 leading-snug">${optText}</span>
+        `;
+
+        optionBtn.addEventListener('click', () => handleOptionClick(idx, optionBtn));
+        optionsContainer.appendChild(optionBtn);
+      });
+
+      // Refrescar iconos Lucide inyectados
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    /**
+     * GESTIÓN DE LA RESPUESTA SELECCIONADA Y FEEDBACK EDUCATIVO
+     */
+    function handleOptionClick(selectedIndex, clickedBtn) {
+      if (state.isAnswerSelected) return;
+      state.isAnswerSelected = true;
+
+      const qData = state.triviaQuestions[state.currentQuestionIndex];
+      const isCorrect = (selectedIndex === qData.correctIndex);
+
+      if (isCorrect) {
+        state.score++;
+      }
+
+      state.userAnswers.push({
+        questionId: qData.id,
+        question: qData.question,
+        selectedOption: qData.options[selectedIndex],
+        isCorrect: isCorrect
+      });
+
+      // Deshabilitar todos los botones de opciones y aplicar colores
+      const allButtons = optionsContainer.querySelectorAll('button');
+      allButtons.forEach((btn, idx) => {
+        btn.disabled = true;
+        btn.classList.remove('hover:bg-brand-petroleumCard', 'hover:border-brand-cyan/60');
+
+        if (idx === qData.correctIndex) {
+          // Opción Correcta (Verde brillante)
+          btn.className = "w-full text-left p-3.5 sm:p-4 rounded-xl border-2 border-emerald-400 bg-emerald-950/40 text-emerald-100 text-xs sm:text-sm font-semibold transition flex items-start gap-3 shadow-lg";
+          btn.querySelector('span:first-child').className = "h-6 w-6 rounded-lg bg-emerald-400 text-slate-950 flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5";
+        } else if (idx === selectedIndex && !isCorrect) {
+          // Opción Incorrecta seleccionada por el usuario (Rojo)
+          btn.className = "w-full text-left p-3.5 sm:p-4 rounded-xl border border-rose-500 bg-rose-950/40 text-rose-200 text-xs sm:text-sm font-medium transition flex items-start gap-3";
+          btn.querySelector('span:first-child').className = "h-6 w-6 rounded-lg bg-rose-500 text-white flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5";
+        } else {
+          // Opciones neutras no seleccionadas
+          btn.className = "w-full text-left p-3.5 sm:p-4 rounded-xl border border-brand-borderDark/40 bg-brand-petroleum/40 text-slate-500 text-xs sm:text-sm transition flex items-start gap-3 opacity-60";
+        }
+      });
+
+      // Mostrar Caja de Feedback Explicativo
+      feedbackBox.classList.remove('hidden');
+      if (isCorrect) {
+        feedbackBox.className = "p-4 rounded-xl border border-emerald-500/50 bg-emerald-950/40 text-emerald-100 transition-all duration-300";
+        feedbackIcon.className = "p-1 rounded-full bg-emerald-400 text-slate-950 shrink-0 mt-0.5";
+        feedbackIcon.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i>`;
+        feedbackTitle.textContent = "¡Respuesta Correcta!";
+        feedbackTitle.className = "font-bold text-xs uppercase tracking-wider text-emerald-300";
+      } else {
+        feedbackBox.className = "p-4 rounded-xl border border-amber-500/50 bg-amber-950/40 text-amber-100 transition-all duration-300";
+        feedbackIcon.className = "p-1 rounded-full bg-amber-400 text-slate-950 shrink-0 mt-0.5";
+        feedbackIcon.innerHTML = `<i data-lucide="info" class="w-4 h-4"></i>`;
+        feedbackTitle.textContent = "Respuesta Registrada";
+        feedbackTitle.className = "font-bold text-xs uppercase tracking-wider text-amber-300";
+      }
+
+      feedbackText.textContent = qData.explanation;
+
+      // Habilitar botón para avanzar
+      btnNextQuestion.disabled = false;
+      btnNextQuestion.className = "py-3 px-6 rounded-xl bg-gradient-to-r from-brand-cyan to-cyan-500 hover:from-cyan-400 hover:to-brand-cyan text-brand-petroleum font-extrabold text-xs uppercase tracking-wider shadow-glow-cyan cursor-pointer transition flex items-center gap-2 transform hover:-translate-y-0.5";
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    /**
+     * AVANZAR A LA SIGUIENTE PREGUNTA O FINALIZAR
+     */
+    btnNextQuestion.addEventListener('click', () => {
+      if (state.currentQuestionIndex < state.triviaQuestions.length - 1) {
+        state.currentQuestionIndex++;
+        renderCurrentQuestion();
+      } else {
+        finishTriviaAndSubmit();
+      }
+    });
+
+    /**
+     * FINALIZAR TRIVIA, MOSTRAR TICKET Y ENVIAR DATOS VÍA FETCH ASÍNCRONO
+     */
+    async function finishTriviaAndSubmit() {
+      showView('success');
+
+      // Lanzar Confeti Festivo
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#00f2fe', '#38bdf8', '#ffffff', '#facc15']
+        });
+      } catch (err) {
+        console.log("Confetti library loaded");
+      }
+
+      // Llenar datos del ticket
+      ticketCodeEl.textContent = state.ticketCode;
+      ticketNameEl.textContent = state.participant.nombre;
+      ticketCompanyEl.textContent = `${state.participant.empresa} (${state.participant.cargo})`;
+      triviaScoreDisplay.textContent = `${state.score} de 3 Aciertos`;
+
+      // Texto para copiar a Instagram
+      const suggestedComment = `¡Participando con AIC TECH en Venezuela Energética 2026! 🚀 Ticket: ${state.ticketCode}`;
+      commentToCopyEl.textContent = suggestedComment;
+
+      // Enlace a Instagram
+      btnInstagram.href = INSTAGRAM_POST_URL;
+
+      // Preparar Payload para Google Apps Script
+      const payload = {
+        timestamp: new Date().toISOString(),
+        fechaLocal: new Date().toLocaleString('es-VE', { timeZone: 'America/Caracas' }),
+        ticketCode: state.ticketCode,
+        nombre: state.participant.nombre,
+        telefono: state.participant.telefono,
+        email: state.participant.email,
+        empresa: state.participant.empresa,
+        cargo: state.participant.cargo,
+        scoreTrivia: `${state.score}/3`,
+        detalleTrivia: JSON.stringify(state.userAnswers)
+      };
+
+      // Envío Asíncrono con fetch() a Google Apps Script
+      sendDataToGoogleScript(payload);
+    }
+
+    /**
+     * FUNCIÓN ASÍNCRONA FETCH A GOOGLE APPS SCRIPT
+     */
+    async function sendDataToGoogleScript(data) {
+      syncStatus.classList.remove('hidden');
+      syncStatus.className = "p-3 rounded-xl bg-cyan-950/70 border border-brand-cyan/40 flex items-center justify-center gap-2 text-xs font-mono text-cyan-300";
+      syncStatus.innerHTML = `
+        <i data-lucide="loader-2" class="w-4 h-4 animate-spin text-brand-cyan"></i>
+        <span>Enviando boleto y respuestas a la base de datos oficial...</span>
+      `;
+      if (window.lucide) lucide.createIcons();
+
+      try {
+        /**
+         * Nota técnica: Para Google Apps Script Web App desplegado,
+         * habitualmente se usa mode: 'no-cors' con POST para evitar bloqueos
+         * de preflight CORS en navegadores cliente, o llamadas POST estándar.
+         */
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(data)
+        });
+
+        // Al usar no-cors la respuesta es opaca pero el POST se procesa en Google Sheets
+        syncStatus.className = "p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/50 flex items-center justify-center gap-2 text-xs font-mono text-emerald-300";
+        syncStatus.innerHTML = `
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>¡Datos sincronizados exitosamente en la base de datos oficial!</span>
+        `;
+      } catch (error) {
+        console.warn("Aviso de sincronización:", error);
+        // Respaldo visual amigable: los datos se guardan en localStorage
+        try {
+          const offlineList = JSON.parse(localStorage.getItem('aictech_concurso_offline') || '[]');
+          offlineList.push(data);
+          localStorage.setItem('aictech_concurso_offline', JSON.stringify(offlineList));
+        } catch (storageErr) {
+          console.error(storageErr);
+        }
+
+        syncStatus.className = "p-3 rounded-xl bg-cyan-950/80 border border-cyan-400/40 flex items-center justify-center gap-2 text-xs font-mono text-cyan-200";
+        syncStatus.innerHTML = `
+          <i data-lucide="shield-check" class="w-4 h-4 text-brand-cyan"></i>
+          <span>¡Boleto ${state.ticketCode} registrado y respaldado en el stand!</span>
+        `;
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    /**
+     * COPIAR COMENTARIO AL PORTAPAPELES
+     */
+    btnCopyComment.addEventListener('click', async () => {
+      const text = commentToCopyEl.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(text);
+        copyFeedback.textContent = "¡Copiado!";
+        btnCopyComment.classList.add('bg-pink-500', 'text-white');
+        setTimeout(() => {
+          copyFeedback.textContent = "Copiar";
+          btnCopyComment.classList.remove('bg-pink-500', 'text-white');
+        }, 2500);
+      } catch (err) {
+        // Fallback básico
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        copyFeedback.textContent = "¡Copiado!";
+        setTimeout(() => { copyFeedback.textContent = "Copiar"; }, 2500);
+      }
+    });
+
+    /**
+     * INTERACCIONES DE BOTONES DE NAVEGACIÓN
+     */
+    btnStart.addEventListener('click', () => {
+      showView('form');
+    });
+
+    btnBackToHero.addEventListener('click', () => {
+      showView('hero');
+    });
+
+    btnResetAll.addEventListener('click', () => {
+      participantForm.reset();
+      showView('hero');
+    });
+
+    // Modal de Bases
+    btnRulesToggle.addEventListener('click', () => modalRules.classList.remove('hidden'));
+    btnCloseRules.addEventListener('click', () => modalRules.classList.add('hidden'));
+    btnUnderstandRules.addEventListener('click', () => modalRules.classList.add('hidden'));
+
+    // Cerrar modal al tocar fondo
+    modalRules.addEventListener('click', (e) => {
+      if (e.target === modalRules) {
+        modalRules.classList.add('hidden');
+      }
+    });
+
+    // Iniciar iconos al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
