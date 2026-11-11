@@ -3,11 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concurso Oficial AIC TECH, C.A. | Venezuela Energética 2026</title>
+  <title>AIC TECH | Patrocinante Premium Stand #5 • Venezuela Energética 2026 (EVE)</title>
   
   <!-- Favicon / Meta -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f2fe'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
-  <meta name="description" content="Participa en la Trivia Tecnológica de AIC TECH, C.A. en la Exposición Venezuela Energética 2026 y gana una EcoFlow River 3 o una Tablet Compaq 12 pulgadas.">
+  <meta name="description" content="AIC TECH, C.A. - Patrocinante Premium Stand #5 en la Exposición Venezuela Energética 2026 (EVE). Participa en la Trivia y gana una EcoFlow River 3 o una Tablet Compaq 12''.">
+  <meta name="theme-color" content="#061320">
+  
+  <!-- Open Graph / WhatsApp / Facebook / LinkedIn Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AIC TECH | Patrocinante Premium Stand #5 • Venezuela Energética 2026">
+  <meta property="og:description" content="Visítanos en el Stand #5 de la EVE 2026. Participa en la Trivia de Medición y Pozos y gana una EcoFlow River 3 o una Tablet Compaq 12''.">
+  <meta property="og:locale" content="es_VE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIC TECH | Patrocinante Premium Stand #5 • Venezuela Energética 2026">
+  <meta name="twitter:description" content="Visítanos en el Stand #5 de la EVE 2026. Demuestra tus conocimientos técnicos y participa por los premios oficiales de AIC TECH.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,35 +139,55 @@
       
       <!-- Logo AIC TECH & Event Badge -->
       <div class="flex items-center gap-3">
-        <div class="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-700 p-0.5 flex items-center justify-center shadow-glow-cyan">
-          <div class="h-full w-full bg-brand-petroleum rounded-[10px] flex items-center justify-center">
-            <i data-lucide="zap" class="w-5 h-5 text-brand-cyan"></i>
+        <a id="logoAdminTrigger" href="#view-hero" class="flex items-center gap-2 select-none cursor-pointer" title="AIC TECH, C.A.">
+          <!-- Logo Oficial AIC TECH (con fallback a isotipo SVG) -->
+          <img src="https://aictech.net/wp-content/uploads/2022/09/cropped-Logo-1024x254.png" alt="AIC TECH C.A. Logo" 
+            class="h-8 sm:h-9 w-auto object-contain brightness-110 drop-shadow-md pointer-events-none" 
+            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+          <div class="hidden h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-700 p-0.5 items-center justify-center shadow-glow-cyan">
+            <div class="h-full w-full bg-brand-petroleum rounded-[10px] flex items-center justify-center">
+              <i data-lucide="zap" class="w-5 h-5 text-brand-cyan"></i>
+            </div>
           </div>
-        </div>
-        <div>
+        </a>
+        <div class="border-l border-brand-borderDark/80 pl-2.5">
           <div class="flex items-center gap-2">
-            <span class="font-extrabold text-base sm:text-lg tracking-wider text-white">AIC TECH<span class="text-brand-cyan">, C.A.</span></span>
-            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-cyan-950/80 text-brand-cyan border border-brand-cyan/40 font-semibold tracking-wider">Stand Oficial</span>
+            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-yellow-300 border border-yellow-400/50 font-bold tracking-wider shadow-sm flex items-center gap-1">
+              <i data-lucide="crown" class="w-3 h-3 text-yellow-400"></i>
+              Patrocinante Premium • Stand #5
+            </span>
           </div>
-          <p class="text-[11px] text-slate-400 font-medium">Venezuela Energética 2026</p>
+          <p class="text-[11px] text-slate-400 font-medium">Venezuela Energética 2026 (EVE)</p>
         </div>
       </div>
 
-      <!-- Tech Partner Badges -->
-      <div class="hidden md:flex items-center gap-4 text-xs font-mono text-slate-400">
-        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-petroleumLight/60 border border-slate-700/60">
-          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Emerson Premier Partner</span>
+      <!-- Tech Partner Badges: CPV + AIC TECH + EMERSON -->
+      <div class="hidden md:flex items-center gap-2.5 text-xs font-mono text-slate-400">
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-petroleumLight/60 border border-amber-500/40 text-amber-300">
+          <span class="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span>Afiliado CPV</span>
         </div>
-        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-petroleumLight/60 border border-slate-700/60">
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-petroleumLight/60 border border-brand-cyan/40 text-cyan-300">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
-          <span>Flexim Ultrasound</span>
+          <span>Emerson (Roxar • Flexim • AMS Trex)</span>
         </div>
       </div>
 
-      <!-- Quick Nav Action -->
-      <div class="flex items-center gap-2">
-        <button id="btnRulesToggle" class="text-xs text-slate-300 hover:text-brand-cyan flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-brand-borderDark hover:border-brand-cyan/50 transition">
+      <!-- Quick Nav Action & Sound / QR Controls -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <!-- Botón Audio On/Off -->
+        <button id="btnSoundToggle" type="button" class="text-xs text-slate-300 hover:text-brand-cyan flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-brand-borderDark hover:border-brand-cyan/50 transition cursor-pointer" title="Activar/Silenciar Efectos de Sonido">
+          <i id="soundIcon" data-lucide="volume-2" class="w-3.5 h-3.5 text-brand-cyan"></i>
+        </button>
+
+        <!-- Botón QR para Celular -->
+        <button id="btnQRToggle" type="button" class="text-xs text-slate-300 hover:text-brand-cyan flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg border border-brand-borderDark hover:border-brand-cyan/50 transition cursor-pointer" title="Escanear Código QR para jugar desde el celular">
+          <i data-lucide="qr-code" class="w-3.5 h-3.5 text-yellow-400"></i>
+          <span class="hidden sm:inline font-mono">QR Móvil</span>
+        </button>
+
+        <!-- Botón Bases -->
+        <button id="btnRulesToggle" type="button" class="text-xs text-slate-300 hover:text-brand-cyan flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-lg border border-brand-borderDark hover:border-brand-cyan/50 transition cursor-pointer">
           <i data-lucide="info" class="w-3.5 h-3.5"></i>
           <span>Bases</span>
         </button>
@@ -176,9 +206,14 @@
       
       <!-- Hero Banner -->
       <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-petroleumLight/80 border border-brand-cyan/30 text-brand-cyan text-xs font-medium tracking-wide shadow-sm">
-          <i data-lucide="flame" class="w-4 h-4 text-cyan-400"></i>
-          <span>Gran Sorteo Técnico • Exposición Venezuela Energética 2026</span>
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-950/90 via-brand-petroleumLight to-amber-950/60 border border-yellow-400/40 text-xs font-medium tracking-wide shadow-md">
+          <span class="px-2 py-0.5 rounded bg-yellow-400 text-slate-950 font-mono font-extrabold text-[10px] uppercase tracking-wider">Stand #5</span>
+          <span class="text-yellow-300 font-bold flex items-center gap-1">
+            <i data-lucide="crown" class="w-3.5 h-3.5 text-yellow-400"></i>
+            Patrocinante Premium
+          </span>
+          <span class="text-slate-500">•</span>
+          <span class="text-slate-200">Exposición Venezuela Energética 2026 (EVE)</span>
         </div>
 
         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
@@ -194,16 +229,21 @@
           <span class="text-white font-semibold">Flexim</span>. ¡Regístrate y clasifica al sorteo oficial a realizarse con <strong class="text-white">App Sorteos</strong> en Instagram!
         </p>
 
-        <!-- CTA Principal de Inicio -->
-        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button id="btnStart" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-brand-cyan to-cyan-500 hover:from-cyan-400 hover:to-brand-cyan text-brand-petroleum font-bold text-base rounded-xl shadow-glow-cyan transform hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-2 group">
+        <!-- CTA Principal de Inicio y QR Móvil -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button id="btnStart" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-brand-cyan to-cyan-500 hover:from-cyan-400 hover:to-brand-cyan text-brand-petroleum font-bold text-base rounded-xl shadow-glow-cyan transform hover:-translate-y-0.5 active:translate-y-0 transition flex items-center justify-center gap-2 group cursor-pointer">
             <span>Iniciar Trivia & Participar</span>
             <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
           </button>
           
+          <button id="btnHeroQR" type="button" class="w-full sm:w-auto px-5 py-3.5 rounded-xl border border-yellow-400/50 bg-yellow-400/10 hover:bg-yellow-400/20 text-yellow-300 font-bold text-sm flex items-center justify-center gap-2 transition cursor-pointer">
+            <i data-lucide="qr-code" class="w-4 h-4 text-yellow-400"></i>
+            <span>¿Hay fila? Juega en tu Celular</span>
+          </button>
+          
           <a href="#premios-section" class="text-xs text-slate-400 hover:text-slate-200 flex items-center gap-1.5 py-2">
             <i data-lucide="gift" class="w-4 h-4 text-brand-cyan"></i>
-            <span>Ver detalles de los premios</span>
+            <span>Ver premios</span>
           </a>
         </div>
       </div>
@@ -224,16 +264,22 @@
           <!-- 1er Lugar Card (EcoFlow River 3) -->
           <div class="relative glass-card rounded-2xl p-6 sm:p-7 border border-brand-cyan/40 hover:border-brand-cyan transition duration-300 shadow-glow-cyan/50 group overflow-hidden">
             <!-- Badge 1er Lugar -->
-            <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-amber-400 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-md">
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-amber-400 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-md z-20">
               <i data-lucide="crown" class="w-3.5 h-3.5 text-slate-950"></i>
               <span>1ER LUGAR</span>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5">
-              <!-- Visual Icon / Graphic -->
-              <div class="h-24 w-24 rounded-2xl bg-gradient-to-br from-cyan-900/60 to-brand-petroleumLight border border-brand-cyan/50 flex flex-col items-center justify-center p-3 text-center shrink-0 group-hover:scale-105 transition">
-                <i data-lucide="battery-charging" class="w-10 h-10 text-brand-cyan mb-1 animate-pulse-slow"></i>
-                <span class="text-[9px] font-mono text-cyan-300 uppercase tracking-wider">Clean Energy</span>
+              <!-- Visual Image Container with fallback -->
+              <div class="h-28 w-28 sm:h-32 sm:w-32 rounded-2xl bg-gradient-to-br from-cyan-950/80 to-brand-petroleumLight border border-brand-cyan/50 flex flex-col items-center justify-center p-2 text-center shrink-0 group-hover:scale-105 transition duration-300 relative overflow-hidden shadow-glow-cyan/30">
+                <img src="https://es.ecoflow.com/cdn/shop/files/estacion-de-energia-portatil-ecoflow-river-3-58407630635355.png" 
+                  alt="EcoFlow River 3 Estación de Energía Portátil" 
+                  class="w-full h-full object-contain relative z-10 drop-shadow-lg" 
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+                <div class="hidden flex-col items-center justify-center">
+                  <i data-lucide="battery-charging" class="w-10 h-10 text-brand-cyan mb-1 animate-pulse-slow"></i>
+                  <span class="text-[9px] font-mono text-cyan-300 uppercase tracking-wider">Clean Energy</span>
+                </div>
               </div>
 
               <!-- Prize Details -->
@@ -246,7 +292,7 @@
                   Estación de energía portátil de última generación con tecnología LiFePO4 ultra-rápida. Ideal para operaciones en campo, respaldos críticos de instrumentación y campamentos.
                 </p>
                 <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-[11px] font-mono text-slate-400">
-                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Portátil</span>
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Portátil LiFePO4</span>
                   <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Carga Ultra-Rápida</span>
                   <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-cyan-300">Salidas AC / DC</span>
                 </div>
@@ -257,16 +303,22 @@
           <!-- 2do Lugar Card (Tablet Compaq 12") -->
           <div class="relative glass-card rounded-2xl p-6 sm:p-7 border border-slate-700 hover:border-slate-400 transition duration-300 group overflow-hidden">
             <!-- Badge 2do Lugar -->
-            <div class="absolute top-4 right-4 bg-gradient-to-r from-slate-300 to-slate-400 text-slate-950 font-bold text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-md">
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-slate-300 to-slate-400 text-slate-950 font-bold text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-md z-20">
               <i data-lucide="award" class="w-3.5 h-3.5 text-slate-950"></i>
               <span>2DO LUGAR</span>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5">
-              <!-- Visual Icon / Graphic -->
-              <div class="h-24 w-24 rounded-2xl bg-gradient-to-br from-slate-800 to-brand-petroleum border border-slate-600 flex flex-col items-center justify-center p-3 text-center shrink-0 group-hover:scale-105 transition">
-                <i data-lucide="tablet" class="w-10 h-10 text-slate-300 mb-1"></i>
-                <span class="text-[9px] font-mono text-slate-400 uppercase tracking-wider">12 Pulgadas</span>
+              <!-- Visual Image Container with fallback -->
+              <div class="h-28 w-28 sm:h-32 sm:w-32 rounded-2xl bg-gradient-to-br from-slate-900 to-brand-petroleum border border-slate-600 flex flex-col items-center justify-center p-2 text-center shrink-0 group-hover:scale-105 transition duration-300 relative overflow-hidden">
+                <img src="https://compaqmobile.com/cdn/shop/files/1_fa618c10-7f42-4784-8af3-57ce363bccf0.png?v=1760029679" 
+                  alt="Tablet Compaq 12 Pulgadas" 
+                  class="w-full h-full object-contain relative z-10 drop-shadow-md" 
+                  onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+                <div class="hidden flex-col items-center justify-center">
+                  <i data-lucide="tablet" class="w-10 h-10 text-slate-300 mb-1"></i>
+                  <span class="text-[9px] font-mono text-slate-400 uppercase tracking-wider">12 Pulgadas</span>
+                </div>
               </div>
 
               <!-- Prize Details -->
@@ -279,7 +331,7 @@
                   Tablet de gran formato y pantalla HD de 12 pulgadas. Potencia y ergonomía para revisión de planos técnicos, supervisión de reportes, telemetría y productividad móvil.
                 </p>
                 <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-[11px] font-mono text-slate-400">
-                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Display 12"</span>
+                  <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Display 12" HD</span>
                   <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Android OS</span>
                   <span class="px-2 py-0.5 rounded bg-brand-petroleum border border-brand-borderDark text-slate-300">Batería Prolongada</span>
                 </div>
@@ -290,35 +342,73 @@
         </div>
       </div>
 
-      <!-- Brand Authority Features (AIC TECH, Emerson, Flexim) -->
+      <!-- Sinergia Estratégica: CPV + AIC TECH + EMERSON -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-borderDark/60 flex items-start gap-3">
-          <div class="p-2 rounded-lg bg-cyan-950/60 text-brand-cyan shrink-0">
-            <i data-lucide="activity" class="w-5 h-5"></i>
+        <!-- CPV -->
+        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-amber-500/30 flex flex-col justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-lg bg-amber-950/60 border border-amber-500/30 text-amber-400 shrink-0 p-1 flex items-center justify-center">
+              <img src="https://camarapetroleradevenezuela.com/favicon.png" alt="CPV Logo" class="h-6 w-6 object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');" />
+              <i data-lucide="building-2" class="hidden w-5 h-5 text-amber-400"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-amber-300 uppercase tracking-wider">Cámara Petrolera (CPV)</h4>
+              <p class="text-[12px] text-slate-300 mt-1">Impulsando el contenido nacional, el talento técnico venezolano y la soberanía energética desde 1978.</p>
+            </div>
           </div>
-          <div>
-            <h4 class="text-xs font-bold text-white uppercase tracking-wider">AIC TECH Pruebas de Pozos</h4>
-            <p class="text-[12px] text-slate-400 mt-1">Superficie, caracterización exacta de fluidos y diagnóstico de productividad de yacimientos.</p>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-borderDark/60 flex items-start gap-3">
-          <div class="p-2 rounded-lg bg-cyan-950/60 text-brand-cyan shrink-0">
-            <i data-lucide="gauge" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Tecnología Emerson</h4>
-            <p class="text-[12px] text-slate-400 mt-1">Roxar 2600 Multifásico, Micro Motion 5700/5726 Coriolis y Comunicador AMS Trex.</p>
+          <div class="pt-1 border-t border-amber-500/20 flex items-center justify-between text-[11px] font-mono text-amber-300/80">
+            <span>Gremio Oficial</span>
+            <span>Capítulo Anzoátegui</span>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-borderDark/60 flex items-start gap-3">
-          <div class="p-2 rounded-lg bg-cyan-950/60 text-brand-cyan shrink-0">
-            <i data-lucide="radio" class="w-5 h-5"></i>
+        <!-- AIC TECH -->
+        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-brand-cyan/40 flex flex-col justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-lg bg-cyan-950/60 border border-brand-cyan/30 text-brand-cyan shrink-0 p-1 flex items-center justify-center">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-xs font-bold text-brand-cyan uppercase tracking-wider">AIC TECH, C.A.</h4>
+              </div>
+              <p class="text-[12px] text-slate-300 mt-1">Base en Anaco. Soluciones Llave en Mano, pruebas de pozos, automatización y trasegado seguro de fluidos.</p>
+            </div>
           </div>
-          <div>
-            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Flexim Clamp-On</h4>
-            <p class="text-[12px] text-slate-400 mt-1">Medición ultrasónica no intrusiva para líquidos y gases sin cortes de tubería.</p>
+          <div class="pt-1 border-t border-brand-cyan/20 flex items-center justify-between text-[11px] font-mono">
+            <span class="text-slate-400">RIF: J-31068543-6</span>
+            <span class="text-yellow-300 font-bold flex items-center gap-1">
+              <i data-lucide="crown" class="w-3 h-3 text-yellow-400"></i>
+              Premium • Stand #5
+            </span>
+          </div>
+        </div>
+
+        <!-- EMERSON -->
+        <div class="p-4 rounded-xl bg-brand-petroleumLight/40 border border-emerald-500/30 flex flex-col justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-lg bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 shrink-0 p-1 flex items-center justify-center">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-emerald-300 uppercase tracking-wider">Tecnología Emerson</h4>
+              <p class="text-[12px] text-slate-300 mt-1">Instrumentación y medición de flujo de clase mundial: Roxar 2600, Flexim, AMS Trex y Micro Motion.</p>
+            </div>
+          </div>
+          <!-- Miniaturas de productos Emerson -->
+          <div class="pt-1.5 border-t border-emerald-500/20 flex items-center justify-around gap-1.5">
+            <div class="h-8 w-8 rounded-lg bg-black/40 border border-emerald-500/30 p-0.5 flex items-center justify-center" title="Roxar 2600 Multifásico">
+              <img src="https://www.emerson.com/is/image/emerson/roxar-2600-multiphase-flow-meters-1?fmt=png-alpha" alt="Roxar 2600" class="max-h-full max-w-full object-contain" />
+            </div>
+            <div class="h-8 w-8 rounded-lg bg-black/40 border border-emerald-500/30 p-0.5 flex items-center justify-center" title="Flexim FLUXUS Clamp-On">
+              <img src="https://www.emerson.com/is/image/emerson/fluxus-f721?fmt=png-alpha" alt="Flexim FLUXUS" class="max-h-full max-w-full object-contain" />
+            </div>
+            <div class="h-8 w-8 rounded-lg bg-black/40 border border-emerald-500/30 p-0.5 flex items-center justify-center" title="AMS Trex Device Communicator">
+              <img src="https://www.emerson.com/is/image/emerson/ams-trex-device-communicator?fmt=png-alpha" alt="AMS Trex" class="max-h-full max-w-full object-contain" />
+            </div>
+            <div class="h-8 w-8 rounded-lg bg-black/40 border border-emerald-500/30 p-0.5 flex items-center justify-center" title="Micro Motion Coriolis 5700">
+              <img src="https://www.emerson.com/is/image/emerson/micro-motion-5700-transmitter?fmt=png-alpha" alt="Micro Motion" class="max-h-full max-w-full object-contain" />
+            </div>
           </div>
         </div>
       </div>
@@ -335,7 +425,7 @@
       <div class="space-y-2">
         <div class="flex justify-between items-center text-xs font-mono">
           <span class="text-brand-cyan font-bold uppercase tracking-wider">Paso 1 de 2: Datos de Registro</span>
-          <span class="text-slate-400">Exposición Venezuela Energética</span>
+          <span class="text-yellow-300 font-mono font-semibold">EVE 2026 • Stand #5 (Premium)</span>
         </div>
         <div class="h-1.5 w-full bg-brand-petroleumLight rounded-full overflow-hidden">
           <div class="h-full bg-brand-cyan w-1/2 rounded-full transition-all duration-500 shadow-glow-cyan"></div>
@@ -433,6 +523,40 @@
 
           </div>
 
+          <!-- Calificación Comercial de Leads / Soluciones de Interés -->
+          <div class="space-y-2 pt-2 border-t border-brand-borderDark/60">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-brand-cyan flex items-center gap-1.5">
+              <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
+              <span>Soluciones de interés para su empresa (Opcional):</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-brand-petroleum/60 border border-brand-borderDark hover:border-brand-cyan/40 cursor-pointer transition">
+                <input type="checkbox" name="interes" value="Pruebas de Pozos en Superficie" class="rounded border-slate-700 text-brand-cyan focus:ring-0">
+                <span>Pruebas de Pozos en Superficie</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-brand-petroleum/60 border border-brand-borderDark hover:border-brand-cyan/40 cursor-pointer transition">
+                <input type="checkbox" name="interes" value="Medición Ultrasónica Flexim (Clamp-On)" class="rounded border-slate-700 text-brand-cyan focus:ring-0">
+                <span>Medición Ultrasónica Flexim</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-brand-petroleum/60 border border-brand-borderDark hover:border-brand-cyan/40 cursor-pointer transition">
+                <input type="checkbox" name="interes" value="Calibración y Diagnóstico (AMS Trex)" class="rounded border-slate-700 text-brand-cyan focus:ring-0">
+                <span>Calibración / AMS Trex</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-brand-petroleum/60 border border-brand-borderDark hover:border-brand-cyan/40 cursor-pointer transition">
+                <input type="checkbox" name="interes" value="Medición Multifásica (Roxar 2600)" class="rounded border-slate-700 text-brand-cyan focus:ring-0">
+                <span>Medición Multifásica Roxar</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-brand-petroleum/60 border border-brand-borderDark hover:border-brand-cyan/40 cursor-pointer transition">
+                <input type="checkbox" name="interes" value="Ingeniería y Proyectos IPC Llave en Mano" class="rounded border-slate-700 text-brand-cyan focus:ring-0">
+                <span>Proyectos IPC Llave en Mano</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-brand-petroleum/60 border border-brand-borderDark hover:border-brand-cyan/40 cursor-pointer transition">
+                <input type="checkbox" name="interes" value="Trasegado Seguro y Manejo de Fluidos" class="rounded border-slate-700 text-brand-cyan focus:ring-0">
+                <span>Trasegado y Manejo de Fluidos</span>
+              </label>
+            </div>
+          </div>
+
           <!-- Privacy Notice -->
           <p class="text-[11px] text-slate-400 leading-normal pt-1">
             <i data-lucide="shield-check" class="w-3.5 h-3.5 inline text-brand-cyan mr-1"></i>
@@ -484,17 +608,24 @@
       <div class="glass-card rounded-2xl p-6 sm:p-8 border border-brand-borderDark shadow-2xl space-y-6 relative overflow-hidden">
         
         <!-- Category & Icon header -->
-        <div class="flex items-center gap-3">
-          <div id="questionIconBox" class="h-10 w-10 rounded-xl bg-brand-petroleum border border-brand-cyan/40 flex items-center justify-center text-brand-cyan shrink-0">
-            <i data-lucide="cpu" class="w-5 h-5"></i>
+        <div class="flex items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3 flex-1">
+            <div id="questionIconBox" class="h-11 w-11 rounded-xl bg-brand-petroleum border border-brand-cyan/40 flex items-center justify-center text-brand-cyan shrink-0">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span id="questionTopic" class="text-[11px] font-mono text-brand-cyan font-bold uppercase tracking-wider">
+                Tema Técnico
+              </span>
+              <h3 id="questionText" class="text-base sm:text-lg font-bold text-white leading-snug">
+                Cargando pregunta...
+              </h3>
+            </div>
           </div>
-          <div>
-            <span id="questionTopic" class="text-[11px] font-mono text-brand-cyan font-bold uppercase tracking-wider">
-              Tema Técnico
-            </span>
-            <h3 id="questionText" class="text-base sm:text-lg font-bold text-white leading-snug">
-              Cargando pregunta...
-            </h3>
+          
+          <!-- Mini Thumbnail del Producto de la Pregunta (Emerson, Roxar, Flexim, Trex, AIC TECH) -->
+          <div id="questionThumbContainer" class="hidden sm:flex h-14 w-14 rounded-xl bg-brand-petroleumLight/80 border border-brand-cyan/30 p-1 shrink-0 items-center justify-center overflow-hidden shadow-inner">
+            <img id="questionThumbImg" src="" alt="Tecnología" class="max-h-full max-w-full object-contain" onerror="document.getElementById('questionThumbContainer').classList.add('hidden');" />
           </div>
         </div>
 
@@ -552,7 +683,7 @@
           <span class="text-xs font-mono uppercase tracking-widest text-brand-cyan font-bold">¡Registro Completado con Éxito!</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white">¡Estás Participando!</h2>
           <p class="text-xs sm:text-sm text-slate-300">
-            Gracias por visitar el stand de <strong class="text-white">AIC TECH, C.A.</strong> en la Exposición Venezuela Energética 2026.
+            Gracias por visitar el <strong class="text-yellow-400">Stand #5</strong> de <strong class="text-white">AIC TECH, C.A.</strong> (<span class="text-amber-300 font-semibold">Patrocinante Premium</span>) en la Exposición Venezuela Energética 2026 (EVE).
           </p>
         </div>
 
@@ -590,44 +721,104 @@
         <!-- CALL TO ACTION INSTAGRAM & APP SORTEOS (PASO FINAL OBLIGATORIO) -->
         <div class="space-y-4 pt-2">
           
-          <div class="p-4 rounded-xl bg-gradient-to-br from-purple-950/40 via-pink-950/30 to-brand-petroleum border border-pink-500/40 text-left space-y-2">
-            <div class="flex items-center gap-2 text-pink-400 text-xs font-bold uppercase tracking-wider">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-              <span>Paso Final para Validar tu Entrada</span>
+          <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-purple-950/70 via-pink-950/40 to-brand-petroleum border-2 border-pink-500/60 text-left space-y-4 shadow-xl shadow-pink-950/40">
+            
+            <div class="flex items-center justify-between gap-2 border-b border-pink-500/30 pb-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded-full bg-pink-500 text-white text-[11px] font-extrabold uppercase tracking-wider flex items-center gap-1 shadow-sm">
+                  <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                  Paso Final Obligatorio
+                </span>
+              </div>
+              <span class="text-[11px] font-mono text-pink-300 font-bold uppercase">Sorteo con App Sorteos</span>
             </div>
-            <p class="text-xs text-slate-200 leading-relaxed">
-              El sorteo se realizará de forma transparente con <strong>App Sorteos</strong> entre todos los comentarios de la publicación oficial de Instagram.
-            </p>
-            <div class="bg-black/40 rounded-lg p-2.5 flex items-center justify-between gap-2 border border-pink-500/20">
-              <span id="commentToCopy" class="text-xs font-mono text-pink-200 truncate">
-                ¡Participando con AIC TECH! Ticket: #VE26-0000
-              </span>
-              <button id="btnCopyComment" title="Copiar texto para comentar" class="shrink-0 px-2.5 py-1 rounded bg-pink-500/20 hover:bg-pink-500/40 text-pink-300 text-xs font-mono flex items-center gap-1 transition">
-                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                <span id="copyFeedback">Copiar</span>
+
+            <!-- Título de instrucción claro solicitado por el usuario -->
+            <div class="space-y-1.5">
+              <h3 class="text-base sm:text-lg font-extrabold text-white leading-snug flex items-center gap-2">
+                <span>¡Copia el texto y pégalo en la publicación de Instagram!</span>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Para que <strong class="text-pink-300">App Sorteos</strong> tome en cuenta tu boleto para la <span class="text-white font-semibold">EcoFlow River 3</span> y la <span class="text-white font-semibold">Tablet Compaq</span>, completa estos 2 sencillos pasos:
+              </p>
+            </div>
+
+            <!-- PASO 1: CAJA DE TEXTO Y BOTÓN COPIAR -->
+            <div class="space-y-2 bg-black/60 rounded-xl p-4 border border-pink-500/40">
+              <div class="flex items-center justify-between text-xs font-semibold text-pink-300">
+                <span class="flex items-center gap-1.5">
+                  <span class="h-5 w-5 rounded-full bg-pink-500 text-white font-extrabold text-[11px] flex items-center justify-center">1</span>
+                  Texto de tu boleto a comentar:
+                </span>
+                <span class="text-[10px] text-slate-400 font-mono">Haz clic abajo para copiar</span>
+              </div>
+
+              <!-- Texto completo sin truncar, visible y con selección fácil -->
+              <div class="p-3 rounded-lg bg-pink-950/40 border border-pink-500/30">
+                <p id="commentToCopy" class="text-xs sm:text-sm font-mono text-pink-100 font-semibold leading-relaxed break-words select-all">
+                  ¡Participando con AIC TECH (Stand #5 • Patrocinante Premium) en Venezuela Energética 2026! 🚀 Ticket: #VE26-0000
+                </p>
+              </div>
+
+              <!-- Botón Copiar Grande y Llamativo -->
+              <button id="btnCopyComment" type="button" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-500 hover:to-rose-400 active:scale-[0.99] text-white font-extrabold text-xs sm:text-sm font-mono flex items-center justify-center gap-2 shadow-lg shadow-pink-600/30 transition-all cursor-pointer">
+                <i data-lucide="copy" class="w-4 h-4"></i>
+                <span id="copyFeedback">COPIAR TEXTO AL PORTAPAPELES</span>
               </button>
             </div>
+
+            <!-- PASO 2: BOTÓN IR A INSTAGRAM -->
+            <div class="space-y-2 pt-1">
+              <div class="flex items-center gap-1.5 text-xs font-semibold text-pink-300">
+                <span class="h-5 w-5 rounded-full bg-pink-500 text-white font-extrabold text-[11px] flex items-center justify-center">2</span>
+                <span>Pégalo en los comentarios del post oficial:</span>
+              </div>
+
+              <a id="btnInstagram" href="https://www.instagram.com/p/DedHHbfMbGW/?utm_source=ig_web_copy_link&srtk=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" 
+                class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:from-purple-500 hover:to-amber-400 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-pink-600/40 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 transition duration-200">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+                <span>Ir al Post de Instagram & Pegar el Comentario</span>
+                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+              </a>
+
+              <p class="text-[11px] text-center text-slate-300">
+                💡 <em>Instrucción: Al abrirse Instagram, mantén presionado el dedo en la caja de comentarios y selecciona <strong>"Pegar"</strong></em>.
+              </p>
+            </div>
+
+            <!-- BOTÓN WHATSAPP COMPARTIR BOLETO -->
+            <div class="pt-1 border-t border-pink-500/20">
+              <a id="btnShareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" 
+                class="w-full py-3 px-4 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm font-mono flex items-center justify-center gap-2 transition duration-200 shadow-md">
+                <i data-lucide="message-circle" class="w-4 h-4 text-white"></i>
+                <span>Guardar / Enviar mi Boleto por WhatsApp</span>
+              </a>
+            </div>
+
           </div>
 
-          <!-- Instagram Action Button -->
-          <a id="btnInstagram" href="https://www.instagram.com/p/DfZkinLgwBN/?utm_source=ig_web_copy_link&mdxt=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" 
-            class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-pink-600 via-rose-500 to-amber-500 hover:from-pink-500 hover:to-amber-400 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-pink-600/30 flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 transition duration-200">
-            <i data-lucide="instagram" class="w-5 h-5"></i>
-            <span>Ir a la Publicación de Instagram & Comentar</span>
-            <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
-          </a>
-
-          <p class="text-[11px] text-slate-400">
-            Asegúrate de seguir a <strong class="text-white">@aictechca</strong> en Instagram para no perderte el anuncio de los ganadores en vivo.
+          <p class="text-[11px] text-center text-slate-400">
+            Asegúrate de seguir a <strong class="text-white">@aictechca</strong> en Instagram para no perderte el sorteo en vivo.
           </p>
 
         </div>
 
+        <!-- TEMPORIZADOR AUTOMÁTICO KIOSK PARA EL STAND -->
+        <div id="kioskTimerBox" class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/70 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-slate-300">
+          <div class="flex items-center gap-2">
+            <i data-lucide="timer" class="w-4 h-4 text-brand-cyan animate-pulse"></i>
+            <span>Pantalla de stand: reinicio automático en <strong id="kioskCountdown" class="text-brand-cyan text-sm font-bold">60</strong>s</span>
+          </div>
+          <button id="btnPauseKioskTimer" type="button" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-[11px] border border-slate-600 cursor-pointer transition">
+            Pausar Contador
+          </button>
+        </div>
+
         <!-- Botón Reiniciar para otro participante en el stand -->
-        <div class="pt-4 border-t border-brand-borderDark/60">
-          <button id="btnResetAll" class="text-xs text-slate-400 hover:text-brand-cyan inline-flex items-center gap-1.5 transition">
+        <div class="pt-2 border-t border-brand-borderDark/60 flex items-center justify-center">
+          <button id="btnResetAll" class="text-xs text-slate-400 hover:text-brand-cyan inline-flex items-center gap-1.5 transition cursor-pointer">
             <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
-            <span>Registrar otro participante en este dispositivo</span>
+            <span>Registrar otro participante ahora</span>
           </button>
         </div>
 
@@ -654,7 +845,7 @@
       </div>
 
       <div class="text-xs text-slate-300 space-y-3 max-h-80 overflow-y-auto pr-2">
-        <p><strong>1. Organizador:</strong> Concurso organizado exclusivamente por AIC TECH, C.A. en el marco de la Exposición Venezuela Energética 2026.</p>
+        <p><strong>1. Organizador:</strong> Concurso organizado exclusivamente por AIC TECH, C.A. (RIF: J-31068543-6), <strong>Patrocinante Premium</strong> de la Exposición Venezuela Energética 2026 (EVE), <strong>Stand #5</strong>.</p>
         <p><strong>2. Participación:</strong> Abierto a todos los asistentes, clientes y profesionales del sector energético que completen el formulario de registro y la trivia de 3 preguntas.</p>
         <p><strong>3. Premios:</strong>
           <br>• <strong>1er Lugar:</strong> Estación de Energía Portátil EcoFlow River 3.
@@ -665,8 +856,83 @@
       </div>
 
       <div class="pt-2 text-right">
-        <button id="btnUnderstandRules" class="px-5 py-2 rounded-xl bg-brand-cyan text-brand-petroleum font-bold text-xs hover:bg-cyan-300 transition">
+        <button id="btnUnderstandRules" class="px-5 py-2 rounded-xl bg-brand-cyan text-brand-petroleum font-bold text-xs hover:bg-cyan-300 transition cursor-pointer">
           Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MODAL CÓDIGO QR MÓVIL                      -->
+  <!-- ========================================== -->
+  <div id="modalQR" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-fade-in">
+    <div class="glass-card max-w-sm w-full rounded-2xl p-6 border border-brand-cyan/50 shadow-2xl text-center space-y-4">
+      <div class="flex justify-between items-center border-b border-brand-borderDark pb-2.5">
+        <h3 class="font-extrabold text-white text-sm flex items-center gap-1.5">
+          <i data-lucide="qr-code" class="w-4 h-4 text-yellow-400"></i>
+          <span>Juega desde tu Celular</span>
+        </h3>
+        <button id="btnCloseQR" class="text-slate-400 hover:text-white cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <p class="text-xs text-slate-300">
+        Escanea este código con la cámara de tu smartphone para participar en la trivia directamente desde tu móvil sin hacer fila:
+      </p>
+      <div class="bg-white p-3.5 rounded-2xl inline-block shadow-xl border-2 border-brand-cyan/40">
+        <img id="qrCodeImage" src="" alt="Código QR del Concurso EVE 2026" class="w-52 h-52 mx-auto object-contain" />
+      </div>
+      <div class="space-y-1">
+        <span class="text-[11px] text-yellow-300 font-mono font-bold block">
+          AIC TECH • Stand #5 • Patrocinante Premium
+        </span>
+        <span class="text-[10px] text-slate-400 block font-mono">
+          Exposición Venezuela Energética 2026
+        </span>
+      </div>
+      <button id="btnCloseQRBottom" class="w-full py-2.5 px-4 rounded-xl bg-brand-petroleumLight border border-brand-borderDark text-xs text-slate-300 hover:text-white font-mono cursor-pointer transition">
+        Cerrar Ventana
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MODAL PANEL ADMINISTRADOR (OFFLINE & CSV)  -->
+  <!-- ========================================== -->
+  <div id="modalAdmin" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fade-in">
+    <div class="glass-card max-w-md w-full rounded-2xl p-6 border border-amber-500/60 shadow-2xl space-y-4 text-left">
+      <div class="flex justify-between items-center border-b border-amber-500/30 pb-3">
+        <h3 class="font-extrabold text-amber-300 text-sm flex items-center gap-2">
+          <i data-lucide="shield" class="w-4 h-4 text-amber-400"></i>
+          <span>Panel de Respaldo del Stand (AIC TECH)</span>
+        </h3>
+        <button id="btnCloseAdmin" class="text-slate-400 hover:text-white cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <div class="space-y-3 text-xs text-slate-300">
+        <div class="p-3.5 rounded-xl bg-amber-950/40 border border-amber-500/40 flex items-center justify-between">
+          <span>Participantes respaldados localmente:</span>
+          <strong id="adminOfflineCount" class="text-xl font-mono text-yellow-300 font-bold">0</strong>
+        </div>
+        <p class="text-[11px] text-slate-400 leading-relaxed">
+          Todos los boletos registrados en este dispositivo quedan respaldados en la memoria local del navegador (incluso si el WiFi del evento sufre caídas). Puedes exportar la lista completa a Excel en cualquier momento.
+        </p>
+      </div>
+
+      <div class="pt-2 space-y-2.5">
+        <button id="btnDownloadCSV" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition cursor-pointer">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Descargar Base de Datos Local (.CSV / Excel)</span>
+        </button>
+
+        <button id="btnClearOfflineData" class="w-full py-2 px-3 rounded-lg bg-rose-950/40 hover:bg-rose-900/60 border border-rose-500/40 text-rose-300 text-[11px] flex items-center justify-center gap-1.5 transition cursor-pointer">
+          <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+          <span>Limpiar Memoria Local de este Dispositivo</span>
         </button>
       </div>
     </div>
@@ -676,12 +942,14 @@
   <!-- FOOTER -->
   <footer class="relative z-10 border-t border-brand-borderDark/60 bg-brand-petroleum/95 py-6 px-4 text-center text-xs text-slate-500 font-mono">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-      <div class="flex items-center gap-2">
+      <div class="flex flex-wrap items-center justify-center gap-2">
         <span class="text-white font-bold">AIC TECH, C.A.</span>
         <span>•</span>
-        <span>RIF: J-XXXXXXXX-X</span>
+        <span class="px-2 py-0.5 rounded bg-amber-500/20 text-yellow-300 border border-yellow-400/40 font-bold">Patrocinante Premium • Stand #5</span>
         <span>•</span>
-        <span>Venezuela Energética 2026</span>
+        <span class="text-brand-cyan font-bold">RIF: J-31068543-6</span>
+        <span>•</span>
+        <span>EVE 2026</span>
       </div>
       <div>
         <span>Soluciones en Pruebas de Pozos • Emerson • Flexim</span>
@@ -700,12 +968,14 @@
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKb4bgpIxzjdHpKxO3-mTDMMroEhOw6w2ac7YRSuWEXtShxj3k1xV5qYB-piIU8rff/exec';
     
     // URL de la publicación oficial de Instagram para el sorteo (App Sorteos)
-    const INSTAGRAM_POST_URL = 'https://www.instagram.com/p/DfZkinLgwBN/?utm_source=ig_web_copy_link&mdxt=NTc4MTIwNjQ2YQ==';
+    const INSTAGRAM_POST_URL = 'https://www.instagram.com/p/DedHHbfMbGW/?utm_source=ig_web_copy_link&srtk=MzRlODBiNWFlZA==';
 
     /**
-     * BANCO DE 15 PREGUNTAS (AIC TECH, EMERSON ROXAR 2600, MICRO MOTION 5700/5726, AMS TREX, FLEXIM)
+     * BANCO DE 36 PREGUNTAS
+     * SINERGIA ESTRATÉGICA: CÁMARA PETROLERA DE VENEZUELA (CPV) + AIC TECH + EMERSON (ROXAR, FLEXIM, AMS TREX, MICRO MOTION)
      */
     const QUESTIONS_BANK = [
+      // --- SECCIÓN 1: AIC TECH, C.A. ---
       {
         id: 1,
         topic: "AIC TECH • Pruebas de Pozos",
@@ -713,13 +983,13 @@
         icon: "activity",
         question: "¿Cuál es el objetivo principal de una prueba de pozos realizada en superficie por AIC TECH?",
         options: [
-          "Determinar el potencial de producción y caracterizar con precisión los fluidos del yacimiento.",
           "Cambiar el color del crudo antes de almacenarlo en tanques.",
+          "Determinar el potencial de producción y caracterizar con precisión los fluidos del yacimiento.",
           "Cerrar permanentemente la producción de la estación de flujo.",
           "Pintar las tuberías de transporte de crudo."
         ],
-        correctIndex: 0,
-        explanation: "Las pruebas de pozos de AIC TECH permiten medir caudales, presiones y composiciones para optimizar la explotación y recobro del yacimiento."
+        correctIndex: 1,
+        explanation: "Las pruebas de pozos de AIC TECH permiten medir caudales, presiones y composiciones para optimizar la explotación y el recobro del yacimiento."
       },
       {
         id: 2,
@@ -743,195 +1013,579 @@
         icon: "database",
         question: "¿Qué información clave entrega AIC TECH al cliente tras una prueba de pozos?",
         options: [
-          "Reportes analíticos certificados de presiones, temperaturas, cortes de agua (BS&W) y gastos de petróleo y gas.",
           "El pronóstico climatológico semanal de la región petrolera.",
-          "Un listado de computadoras comerciales.",
+          "Un listado de repuestos de computación comercial.",
+          "Reportes analíticos certificados de presiones, temperaturas, cortes de agua (BS&W) y gastos de fluidos.",
           "Un plano turístico de las zonas aledañas."
         ],
-        correctIndex: 0,
+        correctIndex: 2,
         explanation: "Estos reportes técnicos proporcionan la base analítica que los ingenieros de yacimientos requieren para tomar decisiones de completación y producción."
       },
       {
         id: 4,
-        topic: "AIC TECH • Eficiencia Productiva",
+        topic: "AIC TECH • Sede y Presencia Operativa",
         category: "AIC TECH",
-        icon: "trending-up",
-        question: "¿Por qué es fundamental ejecutar pruebas periódicas de pozos con AIC TECH?",
+        icon: "map-pin",
+        question: "¿En qué estratégica ciudad del oriente venezolano se encuentra la base principal de operaciones de AIC TECH, C.A.?",
         options: [
-          "Para detectar oportunamente declinaciones de presión, variaciones de corte de agua y anomalías mecánicas.",
-          "Para desperdiciar fluidos en superficie.",
-          "Solo por un requisito decorativo de la locación.",
-          "Para forzar la parada de los sistemas de bombeo."
+          "Puerto Ordaz",
+          "Anaco, Estado Anzoátegui",
+          "San Cristóbal",
+          "Valencia"
         ],
-        correctIndex: 0,
-        explanation: "El monitoreo sistemático previene fallas costosas, optimiza el bombeo electrosumergible o gas lift y prolonga la vida productiva del pozo."
+        correctIndex: 1,
+        explanation: "AIC TECH cuenta con sus instalaciones principales y base de operaciones en Anaco, Estado Anzoátegui, en el epicentro gasífero y petrolero del oriente venezolano."
       },
       {
         id: 5,
-        topic: "AIC TECH • Innovación Tecnológica",
-        category: "Tecnología",
-        icon: "cpu",
-        question: "¿Qué tecnologías integra AIC TECH en sus servicios de medición y pruebas?",
+        topic: "AIC TECH • Portafolio Integral",
+        category: "AIC TECH",
+        icon: "briefcase",
+        question: "Además de pruebas de pozos, ¿qué otros servicios integrales presta AIC TECH a la industria energética?",
         options: [
-          "Sensores digitales de alta gama, telemetría y medidores multifásicos de última generación.",
-          "Medición exclusivamente manual con baldes y reglas.",
-          "Flotadores de madera antiguos sin transmisión de señal.",
-          "Cálculos empíricos sin calibración."
+          "Fabricación de artículos plásticos de papelería.",
+          "Venta de automóviles comerciales.",
+          "Automatización, instrumentación, electricidad, soldadura calificada y acarreo seguro de fluidos.",
+          "Programación de videojuegos móviles."
         ],
-        correctIndex: 0,
-        explanation: "La integración tecnológica de vanguardia asegura que cada barril y pie cúbico sea contabilizado con la máxima fidelidad."
+        correctIndex: 2,
+        explanation: "AIC TECH cuenta con capacidad multidisciplinaria para cubrir automatización industrial, montajes eléctricos, soldadura de alta especificación y manejo de fluidos."
       },
       {
         id: 6,
-        topic: "Emerson • Medidor Multifásico Roxar 2600",
-        category: "Emerson",
+        topic: "AIC TECH • Proyectos Llave en Mano",
+        category: "AIC TECH",
         icon: "layers",
-        question: "¿Cuál es la principal ventaja del Medidor Multifásico Roxar 2600 de Emerson?",
+        question: "¿Qué ventaja ofrece a las operadoras contratar proyectos 'Llave en Mano' (Turnkey / IPC) con AIC TECH?",
         options: [
-          "Mide en línea y en tiempo real petróleo, agua y gas simultáneamente sin requerir un separador de prueba.",
+          "Solo reciben llaves de paso manuales.",
+          "AIC TECH asume desde la ingeniería, procura, construcción y calibración hasta la puesta en marcha integral.",
+          "Obliga a la empresa a subcontratar cinco compañías adicionales.",
+          "Solo abarca la fase inicial sin entregar el proyecto funcionando."
+        ],
+        correctIndex: 1,
+        explanation: "Los proyectos Llave en Mano de AIC TECH garantizan un solo punto de responsabilidad, optimizando tiempos de entrega, costos y estándares de calidad."
+      },
+      {
+        id: 7,
+        topic: "AIC TECH • Trasegado de Fluidos",
+        category: "AIC TECH",
+        icon: "truck",
+        question: "¿Cuál es el valor del servicio de acarreo y trasegado de fluidos que ofrece AIC TECH en campo?",
+        options: [
+          "Desalojo, transporte y manejo seguro de fluidos de producción minimizando riesgos ambientales y operacionales.",
+          "Lavado estético de camionetas de campo.",
+          "Riego de jardines exteriores en la estación.",
+          "Distribución minorista de agua potable."
+        ],
+        correctIndex: 0,
+        explanation: "El manejo controlado y seguro de fluidos en locaciones asegura la continuidad operacional de las pruebas de pozos y protege el entorno ambiental."
+      },
+      {
+        id: 8,
+        topic: "AIC TECH • Automatización y Control",
+        category: "AIC TECH",
+        icon: "cpu",
+        question: "¿En qué consiste la especialidad de automatización y control industrial de AIC TECH?",
+        options: [
+          "Instalación de consolas de sonido residenciales.",
+          "Diseño e integración de sistemas SCADA, PLCs, tableros de control y lazos de instrumentación para procesos.",
+          "Reparación de electrodomésticos en talleres.",
+          "Tendido exclusivo de cables telefónicos residenciales."
+        ],
+        correctIndex: 1,
+        explanation: "AIC TECH moderniza y automatiza estaciones de flujo, plantas y cabezales mediante tecnologías de control confiables y supervisión remota."
+      },
+
+      // --- SECCIÓN 2: CÁMARA PETROLERA DE VENEZUELA (CPV) ---
+      {
+        id: 9,
+        topic: "Cámara Petrolera • Fundación y Rol",
+        category: "Cámara Petrolera",
+        icon: "building-2",
+        question: "¿Qué representa la Cámara Petrolera de Venezuela (CPV), fundada en 1978?",
+        options: [
+          "Una empresa estatal de transporte marítimo.",
+          "Un sindicato de trabajadores de transporte público.",
+          "La principal organización empresarial privada que agrupa a los proveedores de bienes, obras y servicios del sector hidrocarburos.",
+          "Un club de actividades recreativas al aire libre."
+        ],
+        correctIndex: 2,
+        explanation: "La CPV congrega a empresas de ingeniería, procura, servicios técnicos y manufactura nacional que sostienen la cadena productiva del petróleo y gas."
+      },
+      {
+        id: 10,
+        topic: "Cámara Petrolera • Contenido Nacional",
+        category: "Cámara Petrolera",
+        icon: "flag",
+        question: "¿Cuál es uno de los propósitos esenciales promovidos por la Cámara Petrolera de Venezuela?",
+        options: [
+          "Promover el contenido nacional, el talento técnico venezolano y la inversión en la cadena energética.",
+          "Sustituir toda la mano de obra venezolana por personal extranjero.",
+          "Desestimar la inversión privada en tecnología petrolera.",
+          "Reemplazar el gas natural por combustibles fósiles obsoletos."
+        ],
+        correctIndex: 0,
+        explanation: "La CPV impulsa la capacidad técnica nacional y fomenta que la ingeniería y las empresas venezolanas lideren la reactivación energética."
+      },
+      {
+        id: 11,
+        topic: "Cámara Petrolera • Capítulos Regionales",
+        category: "Cámara Petrolera",
+        icon: "globe",
+        question: "¿Cómo está organizada regionalmente la Cámara Petrolera de Venezuela para apoyar a sus afiliados?",
+        options: [
+          "A través de Capítulos Regionales estratégicos en polos energéticos como Anzoátegui, Zulia, Monagas, entre otros.",
+          "Mediante una única oficina en el exterior sin sedes en Venezuela.",
+          "Solo opera en regiones sin actividad petrolera ni industrial.",
+          "No posee presencia en el oriente ni occidente venezolano."
+        ],
+        correctIndex: 0,
+        explanation: "Los Capítulos Regionales de la CPV representan y articulan a las empresas prestadoras de servicios en cada una de las principales cuencas productivas del país."
+      },
+      {
+        id: 12,
+        topic: "Venezuela Energética • Foro y Encuentro",
+        category: "Venezuela Energética",
+        icon: "flame",
+        question: "¿Cuál es el propósito central de encuentros gremiales y técnicos como la Exposición Venezuela Energética 2026?",
+        options: [
+          "Organizar competencias recreativas de atletismo.",
+          "Conectar a operadoras, contratistas y líderes tecnológicos para impulsar alianzas, inversión y nuevas tecnologías en hidrocarburos.",
+          "Subastar antigüedades comerciales de uso doméstico.",
+          "Promover la importación exclusiva de bienes terminados."
+        ],
+        correctIndex: 1,
+        explanation: "Venezuela Energética (EVE 2026) es el evento cumbre del sector hidrocarburos. AIC TECH participa con orgullo como Patrocinante Premium en el Stand #5, presentando sus soluciones junto a Emerson y la Cámara Petrolera."
+      },
+
+      // --- SECCIÓN 3: EMERSON ROXAR 2600 (MULTIFÁSICO) ---
+      {
+        id: 13,
+        topic: "Emerson • Medidor Multifásico Roxar 2600",
+        category: "Emerson Roxar",
+        icon: "layers",
+        question: "¿Cuál es la principal ventaja operativa del Medidor Multifásico Roxar 2600 de Emerson?",
+        options: [
+          "Mide en línea y en tiempo real petróleo, agua y gas simultáneamente sin necesidad de un separador de prueba.",
           "Requiere construir enormes tanques de asentamiento gravitacional para poder medir.",
-          "Solo puede medir agua potable a bajas presiones.",
-          "Obliga a congelar los fluidos antes de registrar el caudal."
+          "Solo puede medir agua dulce a baja presión.",
+          "Obliga a detener el pozo y congelar los fluidos antes de registrar el caudal."
         ],
         correctIndex: 0,
         explanation: "El Roxar 2600 elimina la necesidad de separadores de prueba pesados y complejos, reduciendo huella de espacio, costos de instalación y tiempos de prueba."
       },
       {
-        id: 7,
-        topic: "Emerson • Roxar 2600 en Condiciones Severas",
-        category: "Emerson",
-        icon: "zap",
-        question: "¿Por qué el Roxar 2600 es líder en cabezales de pozos y líneas de flujo?",
+        id: 14,
+        topic: "Emerson • Roxar 2600 en Alto Gas (GVF)",
+        category: "Emerson Roxar",
+        icon: "flame",
+        question: "¿Qué capacidad técnica del Roxar 2600 de Emerson es crítica en pozos con alto contenido de gas?",
         options: [
-          "Por su capacidad de medir con precisión regímenes de flujo cambiantes y altos cortes de agua (Water Cut).",
-          "Porque solo se utiliza en redes de distribución doméstica de gas licuado.",
-          "Porque carece de componentes electrónicos de medición.",
-          "Porque requiere ser desmontado diariamente para calibrarse."
+          "Solo mide gas si se extrae previamente el petróleo.",
+          "Capacidad de medir con exactitud en fracciones de volumen de gas (GVF) de 0 a 100% y cortes de agua extremos.",
+          "Se bloquea automáticamente en presencia de gas libre.",
+          "Requiere filtros de arena de 20 metros de longitud."
         ],
-        correctIndex: 0,
-        explanation: "Utiliza principios avanzados de impedancia eléctrica y tecnología gamma para caracterizar fracciones de fluidos incluso en emulsiones complejas."
+        correctIndex: 1,
+        explanation: "El Roxar 2600 de Emerson maneja transiciones bruscas de flujo, baches de gas (slug flow) y amplios rangos de GVF manteniendo una exactitud superior."
       },
       {
-        id: 8,
-        topic: "Emerson • Transmisor Micro Motion 5700/5726",
-        category: "Emerson",
-        icon: "gauge",
-        question: "¿Qué principio de medición caracteriza a los transmisores Micro Motion 5700/5726 de Emerson?",
+        id: 15,
+        topic: "Emerson • Roxar 2600 y Cero Emisiones (Flaring)",
+        category: "Emerson Roxar",
+        icon: "shield-check",
+        question: "¿Cómo ayuda el Medidor Multifásico Roxar 2600 de Emerson a reducir la huella de carbono y el venteo de gas (flaring)?",
         options: [
-          "Medición directa de flujo másico y densidad basada en la fuerza de Coriolis.",
+          "Obliga a quemar todo el gas en mecheros.",
+          "Al eliminar el separador de prueba convencional, se evitan los venteos, purgas a la atmósfera y fugas de gas metano.",
+          "Convierte el crudo en plástico biodegradable.",
+          "Requiere utilizar químicos contaminantes para la medición."
+        ],
+        correctIndex: 1,
+        explanation: "La medición multifásica en línea cerrada con el Roxar 2600 evita las pérdidas y venteos de gas asociados a la despresurización de separadores de prueba."
+      },
+      {
+        id: 16,
+        topic: "Emerson • Roxar 2600 Principio de Medición Dual",
+        category: "Emerson Roxar",
+        icon: "zap",
+        question: "¿Qué principios físicos combina el Emerson Roxar 2600 para medir fracciones en fluidos emulsionados?",
+        options: [
+          "Medición por efecto térmico de resistencia eléctrica solamente.",
+          "Flotadores de corcho y varillas graduadas.",
+          "Tecnología dual de impedancia eléctrica (inductancia/capacitancia) y densitometría gamma avanzada.",
+          "Pesaje estático en balanzas mecánicas."
+        ],
+        correctIndex: 2,
+        explanation: "La combinación de impedancia y tecnología gamma permite al Roxar 2600 resolver las tres fases (crudo, agua, gas) independientemente de si la emulsión es de agua en petróleo o petróleo en agua."
+      },
+      {
+        id: 17,
+        topic: "Emerson • Roxar 2600 y Ahorro en CAPEX / OPEX",
+        category: "Emerson Roxar",
+        icon: "trending-up",
+        question: "¿Cuál es el beneficio económico clave de implementar el Roxar 2600 de Emerson junto a AIC TECH?",
+        options: [
+          "Reducción de hasta un 80% en peso y espacio de instalación, permitiendo monitoreo continuo 24/7 sin cuadrillas permanentes.",
+          "Aumento de costos operativos en un 300%.",
+          "Obligación de cambiar las tuberías de todo el campo.",
+          "Reducción de la vida útil del pozo."
+        ],
+        correctIndex: 0,
+        explanation: "El Roxar 2600 ofrece un rápido retorno de inversión al permitir automatizar pruebas de pozos remotas y optimizar yacimientos en tiempo real."
+      },
+      {
+        id: 18,
+        topic: "Emerson • Roxar 2600 y Monitoreo de Arena",
+        category: "Emerson Roxar",
+        icon: "alert-triangle",
+        question: "¿Qué sensor complementario de Emerson se integra con el Roxar para proteger las instalaciones de la erosión?",
+        options: [
+          "Sensores acústicos de arena Roxar Sand Monitor para detectar producción de sólidos en tiempo real.",
+          "Filtros de café industriales.",
+          "Sensores de humedad para el suelo agrícola.",
+          "Detectores de humo domésticos."
+        ],
+        correctIndex: 0,
+        explanation: "La integración del Roxar 2600 con el monitor de arena Roxar alerta de inmediato sobre la presencia de partículas abrasivas, protegiendo tuberías y estranguladores."
+      },
+
+      // --- SECCIÓN 4: FLEXIM (AN EMERSON COMPANY) ---
+      {
+        id: 19,
+        topic: "Emerson • Flexim en el Portafolio Global",
+        category: "Emerson Flexim",
+        icon: "radio",
+        question: "¿Qué posición ocupa FLEXIM dentro del ecosistema de automatización y medición de Emerson?",
+        options: [
+          "Es la marca líder de Emerson en caudalímetros ultrasónicos no intrusivos 'clamp-on' para líquidos y gases.",
+          "Una división de fabricación de muebles de oficina.",
+          "Un proveedor exclusivo de cables eléctricos submarinos.",
+          "Una marca de baterías alcalinas comerciales."
+        ],
+        correctIndex: 0,
+        explanation: "FLEXIM fue incorporada a Emerson como la referencia mundial indiscutible en soluciones de medición de flujo no intrusivas clamp-on para aplicaciones exigentes."
+      },
+      {
+        id: 20,
+        topic: "Emerson • Flexim en Gasoductos a Alta Presión",
+        category: "Emerson Flexim",
+        icon: "shield-check",
+        question: "¿Por qué los medidores clamp-on Flexim FLUXUS de Emerson son ideales para gasoductos de alta presión?",
+        options: [
+          "Porque se montan en el exterior del tubo sin cortar tuberías, sin hot-tapping y con cero riesgo de fugas.",
+          "Porque requieren perforar el tubo a máxima presión.",
+          "Porque reducen la velocidad del gas a cero.",
+          "Porque solo funcionan si el gasoducto está vacío."
+        ],
+        correctIndex: 0,
+        explanation: "Flexim FLUXUS se instala en minutos sobre la pared exterior de la tubería mientras el gasoducto opera a plena capacidad, sin caídas de presión ni interrupción del suministro."
+      },
+      {
+        id: 21,
+        topic: "Emerson • Flexim WaveInjector en Altas Temperaturas",
+        category: "Emerson Flexim",
+        icon: "flame",
+        question: "¿Qué rango extremo de temperatura alcanza la tecnología patentada WaveInjector de Flexim (Emerson)?",
+        options: [
+          "Solo funciona entre 10°C y 20°C.",
+          "Desde criogenia a -190 °C hasta temperaturas extremas de +400 °C en refinerías y líneas de vapor.",
+          "Solo resiste temperaturas bajo cero en laboratorios.",
+          "Hasta un máximo de 50 °C únicamente con agua."
+        ],
+        correctIndex: 1,
+        explanation: "El sistema WaveInjector de Flexim separa térmicamente los transductores ultrasónicos de la tubería caliente, permitiendo medir hidrocarburos a más de 400 °C sin contacto."
+      },
+      {
+        id: 22,
+        topic: "Emerson • Flexim y Cero Emisiones Fugitivas",
+        category: "Emerson Flexim",
+        icon: "leaf",
+        question: "¿Por qué Flexim (Emerson) es la solución más ecológica y segura para medir fluidos tóxicos como H2S o ácidos?",
+        options: [
+          "Porque al no penetrar la pared de la tubería, no genera puntos de fuga ni requiere bridas o sellos mecánicos.",
+          "Porque diluye el H2S con aire comprimido.",
+          "Porque sustituye el gas tóxico por vapor de agua.",
+          "Porque absorbe los gases mediante esponjas químicas."
+        ],
+        correctIndex: 0,
+        explanation: "Al ser 100% no intrusivo ('clamp-on'), Flexim elimina totalmente el riesgo de emisiones fugitivas de hidrocarburos volátiles o gases peligrosos como el sulfhídrico (H2S)."
+      },
+      {
+        id: 23,
+        topic: "Emerson • Flexim en Crudos Pesados y Viscosos",
+        category: "Emerson Flexim",
+        icon: "droplet",
+        question: "¿Qué tecnología acústica exclusiva permite a Flexim (Emerson) medir crudos pesados de la Faja del Orinoco?",
+        options: [
+          "Ondas sonoras guiadas (Lamb y Rayleigh) que penetran paredes gruesas y fluidos de alta viscosidad.",
+          "Micrófonos tradicionales sumergidos en el fluido.",
+          "Señales de radio FM comerciales.",
+          "Sensores ópticos transparentes en tubos de vidrio."
+        ],
+        correctIndex: 0,
+        explanation: "Los transductores de ondas guiadas de Flexim generan una onda acústica altamente enfocada que atraviesa tuberías de acero de gran espesor y fluidos viscosos con máxima fidelidad."
+      },
+      {
+        id: 24,
+        topic: "Emerson • Flexim Medición Másica No Intrusiva",
+        category: "Emerson Flexim",
+        icon: "scale",
+        question: "¿Cómo logra Flexim (Emerson) entregar medición de flujo másico además de caudal volumétrico?",
+        options: [
+          "Calcula la densidad del fluido en tiempo real a partir de la velocidad sónica del medio.",
+          "Pesando la tubería completa con una grúa en campo.",
+          "Estimando el valor según el color del crudo.",
+          "Multiplicando el volumen por una constante fija sin medir."
+        ],
+        correctIndex: 0,
+        explanation: "La velocidad de propagación del ultrasonido en el fluido se correlaciona con la densidad y temperatura, permitiendo a Flexim calcular masa y concentración química en línea."
+      },
+
+      // --- SECCIÓN 5: EMERSON AMS TREX (COMUNICADOR DE CAMPO) ---
+      {
+        id: 25,
+        topic: "Emerson • Comunicador AMS Trex y Seguridad",
+        category: "Emerson AMS Trex",
+        icon: "shield-alert",
+        question: "¿Qué certificación de seguridad clave distingue al Comunicador de Dispositivos AMS Trex de Emerson?",
+        options: [
+          "Solo puede usarse en oficinas climatizadas.",
+          "Seguridad Intrínseca certificada para operar en áreas explosivas Zona 0 y Clase I División 1 sin permisos de trabajo en caliente.",
+          "Requiere trajes blindados para su operación.",
+          "Solo opera desconectando la energía de toda la planta."
+        ],
+        correctIndex: 1,
+        explanation: "El AMS Trex es intrínsecamente seguro (Ex ia), lo que permite a los instrumentistas ingresar a zonas clasificadas y diagnosticar equipos sin apagar procesos ni tramitar permisos especiales."
+      },
+      {
+        id: 26,
+        topic: "Emerson • AMS Trex Tecnología Device Power",
+        category: "Emerson AMS Trex",
+        icon: "zap",
+        question: "¿Qué gran ventaja operativa brinda la función Device Power del Comunicador AMS Trex de Emerson?",
+        options: [
+          "Carga teléfonos móviles de los operadores.",
+          "Permite energizar y calibrar transmisores de 4-20 mA directamente desde el comunicador sin fuentes externas de energía.",
+          "Enciende motores de bombeo de 440V.",
+          "Elimina la batería del comunicador."
+        ],
+        correctIndex: 1,
+        explanation: "Con Device Power, el técnico solo conecta el Trex al transmisor y este se enciende de inmediato con la batería del comunicador, ahorrando horas de conexionado en campo."
+      },
+      {
+        id: 27,
+        topic: "Emerson • AMS Trex y Protocolos de Campo",
+        category: "Emerson AMS Trex",
+        icon: "network",
+        question: "¿Qué protocolos de instrumentación inteligente configura y diagnostica el AMS Trex de Emerson?",
+        options: [
+          "Bluetooth comercial y Wi-Fi doméstico únicamente.",
+          "Protocolos industriales estándar HART (incluido HART 7 y WirelessHART) y Foundation Fieldbus.",
+          "Solo señales neumáticas de 3 a 15 psi.",
+          "Protocolos exclusivos de impresoras de oficina."
+        ],
+        correctIndex: 1,
+        explanation: "El AMS Trex contiene librerías completas de archivos DD (Device Descriptor) para miles de dispositivos HART y Foundation Fieldbus de todos los fabricantes."
+      },
+      {
+        id: 28,
+        topic: "Emerson • AMS Trex Diagnóstico de Válvulas (ValveLink)",
+        category: "Emerson AMS Trex",
+        icon: "settings",
+        question: "¿Cómo evalúa el AMS Trex de Emerson la salud operativa de válvulas de control críticas in situ?",
+        options: [
+          "Mediante la app ValveLink Mobile para realizar pruebas de carrera parcial (PST) y firma de válvula sin desmontarla.",
+          "Golpeando el actuador con una maza para escuchar el eco.",
+          "Pintando la válvula con pintura reflectante.",
+          "Desarmando toda la válvula en el taller durante semanas."
+        ],
+        correctIndex: 0,
+        explanation: "La aplicación ValveLink en el Trex permite diagnosticar la fricción, respuesta dinámica y asiento de controladores digitales Fisher FIELDVUE sin afectar la producción."
+      },
+      {
+        id: 29,
+        topic: "Emerson • AMS Trex y Sincronización de Datos",
+        category: "Emerson AMS Trex",
+        icon: "refresh-cw",
+        question: "¿Cómo garantiza el AMS Trex de Emerson que los cambios de calibración en campo queden registrados?",
+        options: [
+          "Sincroniza automáticamente los cambios y registros con la base de datos central de AMS Device Manager.",
+          "Obliga a escribir todo a mano en cuadernos de papel.",
+          "Borra los datos inmediatamente al apagarse.",
+          "Solo guarda datos si se conecta a un televisor."
+        ],
+        correctIndex: 0,
+        explanation: "Al conectarse por Wi-Fi o USB, el AMS Trex transfiere de forma transparente las bitácoras de calibración y configuración al software de gestión de activos de la planta."
+      },
+
+      // --- SECCIÓN 6: EMERSON MICRO MOTION (CORIOLIS 5700/5726) ---
+      {
+        id: 30,
+        topic: "Emerson • Transmisor Micro Motion 5700/5726",
+        category: "Emerson Micro Motion",
+        icon: "gauge",
+        question: "¿Qué principio de medición caracteriza a los medidores Micro Motion Coriolis de Emerson?",
+        options: [
+          "Medición directa simultánea de flujo másico y densidad basada en la fuerza de Coriolis.",
           "Estimación por aspas mecánicas sumergidas propensas a desgaste.",
           "Medición por efecto térmico exclusivo de aire estático.",
           "Sensor de presión hidrostática rudimentario."
         ],
         correctIndex: 0,
-        explanation: "La tecnología Coriolis Micro Motion ofrece la más alta precisión del mercado en medición de masa y densidad para transferencia de custodia y control de procesos."
+        explanation: "La tecnología Coriolis Micro Motion de Emerson es el estándar mundial indiscutible en exactitud metrológica para transferencia de custodia y control de procesos."
       },
       {
-        id: 9,
-        topic: "Emerson • Smart Meter Verification (5700/5726)",
-        category: "Emerson",
+        id: 31,
+        topic: "Emerson • Smart Meter Verification (SMV)",
+        category: "Emerson Micro Motion",
         icon: "check-circle-2",
-        question: "¿Qué función avanzada ofrece el transmisor Emerson 5700/5726 para verificar su salud en línea?",
+        question: "¿Qué función avanzada ofrece el transmisor Emerson 5700/5726 para verificar su salud sin parar la planta?",
         options: [
-          "Smart Meter Verification: comprueba la calibración e integridad estructural del sensor sin detener el flujo.",
+          "Smart Meter Verification: comprueba la calibración e integridad estructural del tubo sensor en 90 segundos.",
           "Apagado automático de emergencia al detectar crudo.",
           "Prueba de vibración con impacto manual sobre los tubos.",
           "Requiere enviar el equipo al exterior cada mes para verificarlo."
         ],
         correctIndex: 0,
-        explanation: "Smart Meter Verification certifica la exactitud del medidor en solo 90 segundos con solo tocar un botón y genera reportes auditables."
+        explanation: "Smart Meter Verification certifica en línea la rigidez estructural de los tubos y la electrónica del medidor, generando reportes certificados para auditorías fiscales."
       },
       {
-        id: 10,
-        topic: "Emerson • Comunicador de Campo AMS Trex",
-        category: "Emerson",
-        icon: "smartphone",
-        question: "¿Para qué se utiliza el Comunicador de Dispositivos AMS Trex de Emerson?",
+        id: 32,
+        topic: "Emerson • Micro Motion en Transferencia de Custodia",
+        category: "Emerson Micro Motion",
+        icon: "award",
+        question: "¿Por qué los transmisores Micro Motion 5700/5726 de Emerson son líderes en fiscalización de crudo y gas?",
         options: [
-          "Configurar, calibrar y diagnosticar instrumentos HART y Foundation Fieldbus en áreas clasificadas peligrosas.",
-          "Sintonizar canales de televisión digital en el campo petrolero.",
-          "Cargar acumuladores de vehículos pesados en talleres.",
-          "Proyectar películas en el campamento."
+          "Porque no poseen partes móviles, eliminando el desgaste y garantizando incertidumbres de medición menores al 0.05%.",
+          "Porque funcionan con turbinas plásticas desechables.",
+          "Porque requieren ser calibrados cada tres horas.",
+          "Porque son medidores exclusivamente domésticos."
         ],
         correctIndex: 0,
-        explanation: "El comunicador portátil AMS Trex es intrínsecamente seguro (antiexplosión), alimenta transmisores directamente y permite diagnósticos avanzados in situ."
+        explanation: "Al no tener partes mecánicas en movimiento dentro del tubo, Micro Motion mantiene su calibración durante años, garantizando una contabilidad fiscal exacta."
       },
+
+      // --- SECCIÓN 7: SINERGIA ESTRATÉGICA CPV + AIC TECH + EMERSON ---
       {
-        id: 11,
-        topic: "Emerson • Ventajas del AMS Trex",
-        category: "Emerson",
-        icon: "wrench",
-        question: "¿Qué capacidad exclusiva destaca al AMS Trex en el mantenimiento de instrumentación?",
-        options: [
-          "Capacidad de alimentar el lazo de corriente del transmisor sin necesidad de una fuente externa.",
-          "Sustituye completamente la tubería principal de proceso.",
-          "Genera vapor para limpieza de calderas.",
-          "Funciona únicamente conectado a una toma de corriente de 440V."
-        ],
-        correctIndex: 0,
-        explanation: "La tecnología Device Power del AMS Trex ahorra tiempo valioso al energizar los instrumentos de 4-20 mA en campo mientras se configuran."
-      },
-      {
-        id: 12,
-        topic: "Flexim • Medición Clamp-On No Intrusiva",
-        category: "Flexim",
-        icon: "radio",
-        question: "¿Cómo se instalan los medidores ultrasónicos de flujo Flexim FLUXUS?",
-        options: [
-          "De forma externa sobre la tubería ('clamp-on'), sin cortar el tubo ni detener la producción.",
-          "Perforando la tubería a alta presión con brocas industriales.",
-          "Insertando turbinas internas que reducen el diámetro de la línea.",
-          "Sumergiendo la tubería completa dentro de un tanque de prueba."
-        ],
-        correctIndex: 0,
-        explanation: "Al instalarse externamente, Flexim elimina riesgos de fuga, desgaste abrasivo y caídas de presión, garantizando cero paradas de planta."
-      },
-      {
-        id: 13,
-        topic: "Flexim • Aplicaciones en Crudo y Gas",
-        category: "Flexim",
-        icon: "flame",
-        question: "¿Qué tipo de fluidos pueden ser medidos con los sistemas ultrasónicos de Flexim?",
-        options: [
-          "Líquidos, gases, hidrocarburos viscosos y fluidos a temperaturas extremas (desde criogenia hasta +400 °C).",
-          "Únicamente agua mineral embotellada a temperatura ambiente.",
-          "Solamente aire seco dentro de gabinetes de control.",
-          "Ningún fluido con presencia de hidrocarburos."
-        ],
-        correctIndex: 0,
-        explanation: "Los transductores de Flexim emplean tecnología de ondas guiadas y tiempo de tránsito capaz de medir gases y crudos pesados con extrema confiabilidad."
-      },
-      {
-        id: 14,
-        topic: "Flexim • Seguridad y Confiabilidad",
-        category: "Flexim",
-        icon: "shield-alert",
-        question: "¿Por qué los medidores clamp-on de Flexim son la mejor opción para productos corrosivos o tóxicos?",
-        options: [
-          "Porque los sensores nunca entran en contacto con el fluido, previniendo corrosión y peligro de fugas.",
-          "Porque disuelven químicamente el fluido al pasar.",
-          "Porque actúan como filtros mecánicos retenedores de arena.",
-          "Porque eliminan por completo la presión del fluido."
-        ],
-        correctIndex: 0,
-        explanation: "Cero penetración en la pared del tubo significa cero puntos de fuga, protegiendo al personal, las instalaciones y el medio ambiente."
-      },
-      {
-        id: 15,
-        topic: "Sinergia • AIC TECH + Emerson + Flexim",
+        id: 33,
+        topic: "Sinergia • CPV + AIC TECH + Emerson",
         category: "Alianza Técnica",
         icon: "award",
-        question: "¿Qué solución integral aportan AIC TECH, Emerson y Flexim en Venezuela Energética 2026?",
+        question: "¿Cómo se complementa la sinergia estratégica entre la Cámara Petrolera (CPV), AIC TECH y Emerson?",
         options: [
-          "Ingeniería especializada, tecnología de medición de clase mundial y soporte local directo para la industria.",
+          "La CPV impulsa la capacidad nacional, AIC TECH aporta ingeniería y soporte local en campo, y Emerson provee tecnología líder mundial (Roxar, Flexim, Trex).",
           "Suministro de herramientas manuales de ferretería doméstica.",
-          "Venta de combustibles al detal.",
+          "Venta de automóviles comerciales de paseo.",
           "Servicios de transporte turístico fluvial."
         ],
         correctIndex: 0,
-        explanation: "AIC TECH reúne a líderes globales como Emerson y Flexim para optimizar la producción energética con máxima precisión y respaldo técnico en el país."
+        explanation: "La unión de la visión gremial de la CPV, la ejecución técnica en campo de AIC TECH y la tecnología de Emerson impulsa la modernización de la industria energética venezolana."
+      },
+      {
+        id: 34,
+        topic: "Sinergia • Contenido Nacional y Transferencia",
+        category: "Alianza Técnica",
+        icon: "users",
+        question: "¿Cómo fortalece la alianza AIC TECH + Emerson el contenido nacional promovido por la Cámara Petrolera?",
+        options: [
+          "Capacitando ingenieros y técnicos venezolanos para calibrar, comisionar y operar tecnología de punta en campos petroleros nacionales.",
+          "Contratando personal exclusivamente extranjero sin capacitar a nadie en el país.",
+          "Cerrando talleres de servicio locales.",
+          "Prohibiendo el uso de software de automatización en plantas."
+        ],
+        correctIndex: 0,
+        explanation: "AIC TECH invierte en talento técnico local, asegurando que Venezuela cuente con soporte calificado in situ para los sistemas más avanzados de Emerson."
+      },
+      {
+        id: 35,
+        topic: "Sinergia • Pruebas de Pozos de Nueva Generación",
+        category: "Alianza Técnica",
+        icon: "trending-up",
+        question: "¿Qué valor único aporta AIC TECH al integrar Roxar 2600, Flexim y AMS Trex de Emerson en pruebas de pozos?",
+        options: [
+          "Permite realizar pruebas de pozos en tiempo real con máxima exactitud metrológica, cero emisiones fugitivas y diagnóstico digital completo.",
+          "Requiere parar los pozos durante semanas para tomar muestras manuales.",
+          "Sustituye la instrumentación digital por manómetros mecánicos antiguos.",
+          "Aumenta las caídas de presión en las líneas de recolección."
+        ],
+        correctIndex: 0,
+        explanation: "La combinación de medición multifásica Roxar, ultrasonido clamp-on Flexim y diagnóstico AMS Trex permite a AIC TECH entregar caracterizaciones exactas con cero interrupción operacional."
+      },
+      {
+        id: 36,
+        topic: "Sinergia • Modernización del Sector Hidrocarburos",
+        category: "Alianza Técnica",
+        icon: "zap",
+        question: "¿Por qué eventos como Venezuela Energética 2026 destacan la cooperación entre CPV, empresas de servicio como AIC TECH y líderes globales como Emerson?",
+        options: [
+          "Porque demuestran que la reactivación y optimización de los campos petroleros se logra mediante tecnología de clase mundial aplicada por talento nacional.",
+          "Solo para exhibir folletos publicitarios sin valor técnico.",
+          "Para suspender las operaciones petroleras del país.",
+          "Para promover la venta de electrodomésticos."
+        ],
+        correctIndex: 0,
+        explanation: "La articulación entre el gremio empresarial (CPV), el integrador nacional AIC TECH (Patrocinante Premium en el Stand #5 de la EVE 2026) y Emerson es el verdadero motor del reimpulso energético venezolano."
       }
     ];
+
+    /**
+     * EFECTOS DE SONIDO SINTETIZADOS CON WEB AUDIO API
+     * (Sin dependencias externas ni archivos de audio pesados)
+     */
+    const soundFX = {
+      ctx: null,
+      enabled: true,
+      init() {
+        if (!this.ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) {
+            this.ctx = new AudioCtx();
+          }
+        }
+      },
+      playTone(freq, type, duration, delay = 0, vol = 0.12) {
+        if (!this.enabled) return;
+        try {
+          this.init();
+          if (!this.ctx) return;
+          if (this.ctx.state === 'suspended') {
+            this.ctx.resume();
+          }
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime + delay);
+          gain.gain.setValueAtTime(vol, this.ctx.currentTime + delay);
+          gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + delay + duration);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(this.ctx.currentTime + delay);
+          osc.stop(this.ctx.currentTime + delay + duration);
+        } catch (e) {
+          console.warn("Audio FX:", e);
+        }
+      },
+      click() {
+        this.playTone(850, 'sine', 0.04, 0, 0.08);
+      },
+      correct() {
+        this.playTone(523.25, 'triangle', 0.12, 0, 0.15);     // Do5
+        this.playTone(659.25, 'triangle', 0.12, 0.08, 0.15);  // Mi5
+        this.playTone(783.99, 'triangle', 0.25, 0.16, 0.18);  // Sol5
+      },
+      incorrect() {
+        this.playTone(261.63, 'sawtooth', 0.14, 0, 0.12);     // Do4
+        this.playTone(196.00, 'sawtooth', 0.22, 0.10, 0.12);  // Sol3
+      },
+      fanfare() {
+        this.playTone(523.25, 'triangle', 0.10, 0, 0.15);     // Do5
+        this.playTone(659.25, 'triangle', 0.10, 0.09, 0.15);  // Mi5
+        this.playTone(783.99, 'triangle', 0.12, 0.18, 0.15);  // Sol5
+        this.playTone(1046.50, 'triangle', 0.40, 0.28, 0.22); // Do6
+      }
+    };
 
     /**
      * ESTADO DE LA APLICACIÓN (SPA STATE)
@@ -942,14 +1596,18 @@
         telefono: '',
         email: '',
         empresa: '',
-        cargo: ''
+        cargo: '',
+        intereses: []
       },
       ticketCode: '',
       triviaQuestions: [],
       currentQuestionIndex: 0,
       userAnswers: [],
       score: 0,
-      isAnswerSelected: false
+      isAnswerSelected: false,
+      kioskTimerId: null,
+      kioskSecondsLeft: 60,
+      isKioskPaused: false
     };
 
     /**
@@ -962,15 +1620,33 @@
       success: document.getElementById('view-success')
     };
 
-    // Navegación y modales
+    // Navegación, Sonido y QR
     const btnStart = document.getElementById('btnStart');
+    const btnHeroQR = document.getElementById('btnHeroQR');
+    const btnQRToggle = document.getElementById('btnQRToggle');
+    const btnSoundToggle = document.getElementById('btnSoundToggle');
+    const soundIcon = document.getElementById('soundIcon');
+    const logoAdminTrigger = document.getElementById('logoAdminTrigger');
     const btnBackToHero = document.getElementById('btnBackToHero');
     const participantForm = document.getElementById('participantForm');
+    const btnResetAll = document.getElementById('btnResetAll');
+
+    // Modales
     const modalRules = document.getElementById('modalRules');
     const btnRulesToggle = document.getElementById('btnRulesToggle');
     const btnCloseRules = document.getElementById('btnCloseRules');
     const btnUnderstandRules = document.getElementById('btnUnderstandRules');
-    const btnResetAll = document.getElementById('btnResetAll');
+
+    const modalQR = document.getElementById('modalQR');
+    const btnCloseQR = document.getElementById('btnCloseQR');
+    const btnCloseQRBottom = document.getElementById('btnCloseQRBottom');
+    const qrCodeImage = document.getElementById('qrCodeImage');
+
+    const modalAdmin = document.getElementById('modalAdmin');
+    const btnCloseAdmin = document.getElementById('btnCloseAdmin');
+    const adminOfflineCount = document.getElementById('adminOfflineCount');
+    const btnDownloadCSV = document.getElementById('btnDownloadCSV');
+    const btnClearOfflineData = document.getElementById('btnClearOfflineData');
 
     // Elementos de la Trivia
     const questionStepLabel = document.getElementById('questionStepLabel');
@@ -986,7 +1662,7 @@
     const btnNextQuestion = document.getElementById('btnNextQuestion');
     const btnNextText = document.getElementById('btnNextText');
 
-    // Elementos de Éxito y Ticket
+    // Elementos de Éxito, Ticket y Kiosk
     const ticketCodeEl = document.getElementById('ticketCode');
     const triviaScoreDisplay = document.getElementById('triviaScoreDisplay');
     const ticketNameEl = document.getElementById('ticketName');
@@ -995,12 +1671,19 @@
     const btnCopyComment = document.getElementById('btnCopyComment');
     const copyFeedback = document.getElementById('copyFeedback');
     const btnInstagram = document.getElementById('btnInstagram');
+    const btnShareWhatsApp = document.getElementById('btnShareWhatsApp');
     const syncStatus = document.getElementById('syncStatus');
+    const kioskCountdown = document.getElementById('kioskCountdown');
+    const btnPauseKioskTimer = document.getElementById('btnPauseKioskTimer');
 
     /**
      * CAMBIO DE PANTALLAS (SPA ROUTING INTERNO)
      */
     function showView(viewKey) {
+      if (viewKey !== 'success' && state.kioskTimerId) {
+        clearInterval(state.kioskTimerId);
+        state.kioskTimerId = null;
+      }
       Object.keys(views).forEach(key => {
         if (key === viewKey) {
           views[key].classList.remove('hidden');
@@ -1020,11 +1703,47 @@
     }
 
     /**
-     * SELECCIÓN ALEATORIA DE 3 PREGUNTAS DEL BANCO DE 15
+     * IMÁGENES OFICIALES DE PRODUCTOS (EMERSON & AIC TECH)
+     */
+    const PRODUCT_IMAGES = {
+      roxar: "https://www.emerson.com/is/image/emerson/roxar-2600-multiphase-flow-meters-1?fmt=png-alpha",
+      flexim: "https://www.emerson.com/is/image/emerson/fluxus-f721?fmt=png-alpha",
+      trex: "https://www.emerson.com/is/image/emerson/ams-trex-device-communicator?fmt=png-alpha",
+      micromotion: "https://www.emerson.com/is/image/emerson/micro-motion-5700-transmitter?fmt=png-alpha",
+      aictech: "https://aictech.net/wp-content/uploads/2022/09/cropped-Logo-1024x254.png"
+    };
+
+    function getQuestionImage(q) {
+      const text = `${q.category} ${q.topic} ${q.question}`.toLowerCase();
+      if (text.includes('roxar')) return PRODUCT_IMAGES.roxar;
+      if (text.includes('flexim') || text.includes('clamp-on') || text.includes('waveinjector')) return PRODUCT_IMAGES.flexim;
+      if (text.includes('trex') || text.includes('valvelink')) return PRODUCT_IMAGES.trex;
+      if (text.includes('micro motion') || text.includes('coriolis') || text.includes('smart meter')) return PRODUCT_IMAGES.micromotion;
+      if (text.includes('emerson') || text.includes('sinergia') || text.includes('alianza')) return PRODUCT_IMAGES.roxar;
+      return PRODUCT_IMAGES.aictech;
+    }
+
+    /**
+     * SELECCIÓN ALEATORIA DE 3 PREGUNTAS DEL BANCO DE 36
+     * Y BARAJAJE DINÁMICO DE OPCIONES (A, B, C, D)
      */
     function getRandomQuestions(pool, count = 3) {
-      const shuffled = [...pool].sort(() => 0.5 - Math.random());
-      return shuffled.slice(0, count);
+      // 1. Barajar el banco de 36 preguntas y tomar 3 aleatorias
+      const selected = [...pool].sort(() => 0.5 - Math.random()).slice(0, count);
+
+      // 2. Barajar aleatoriamente las 4 opciones de cada pregunta para que la respuesta correcta nunca sea predecible
+      return selected.map(q => {
+        const correctText = q.options[q.correctIndex];
+        const shuffledOptions = [...q.options].sort(() => 0.5 - Math.random());
+        const newCorrectIndex = shuffledOptions.indexOf(correctText);
+
+        return {
+          ...q,
+          options: shuffledOptions,
+          correctIndex: newCorrectIndex,
+          productImg: getQuestionImage(q)
+        };
+      });
     }
 
     /**
@@ -1038,6 +1757,9 @@
       const email = document.getElementById('inputEmail').value.trim();
       const empresa = document.getElementById('inputEmpresa').value.trim();
       const cargo = document.getElementById('inputCargo').value.trim();
+
+      // Recopilar calificación comercial (intereses seleccionados)
+      const selectedIntereses = Array.from(document.querySelectorAll('input[name="interes"]:checked')).map(cb => cb.value);
 
       let isValid = true;
 
@@ -1084,8 +1806,10 @@
 
       if (!isValid) return;
 
+      soundFX.click();
+
       // Guardar en Estado
-      state.participant = { nombre, telefono, email, empresa, cargo };
+      state.participant = { nombre, telefono, email, empresa, cargo, intereses: selectedIntereses };
       state.ticketCode = generateTicketCode();
 
       // Preparar 3 preguntas aleatorias
@@ -1113,6 +1837,25 @@
       categoryBadge.textContent = qData.category;
       questionTopic.textContent = qData.topic;
       questionText.textContent = qData.question;
+      
+      const iconBox = document.getElementById('questionIconBox');
+      if (iconBox && qData.icon) {
+        iconBox.innerHTML = `<i data-lucide="${qData.icon}" class="w-5 h-5"></i>`;
+      }
+
+      // Visualización de la imagen del producto (Emerson, Roxar, Flexim, Trex, AIC TECH)
+      const thumbContainer = document.getElementById('questionThumbContainer');
+      const thumbImg = document.getElementById('questionThumbImg');
+      if (thumbContainer && thumbImg) {
+        if (qData.productImg) {
+          thumbImg.src = qData.productImg;
+          thumbContainer.classList.remove('hidden');
+          thumbContainer.classList.add('sm:flex');
+        } else {
+          thumbContainer.classList.add('hidden');
+          thumbContainer.classList.remove('sm:flex');
+        }
+      }
 
       const progressPercent = ((qIndex + 1) / totalQuestions) * 100;
       triviaProgressBar.style.width = `${progressPercent}%`;
@@ -1131,7 +1874,7 @@
       qData.options.forEach((optText, idx) => {
         const optionBtn = document.createElement('button');
         optionBtn.type = 'button';
-        optionBtn.className = `w-full text-left p-3.5 sm:p-4 rounded-xl border border-brand-borderDark bg-brand-petroleum/80 hover:bg-brand-petroleumCard hover:border-brand-cyan/60 text-slate-200 text-xs sm:text-sm font-medium transition duration-200 flex items-start gap-3 group`;
+        optionBtn.className = `w-full text-left p-3.5 sm:p-4 rounded-xl border border-brand-borderDark bg-brand-petroleum/80 hover:bg-brand-petroleumCard hover:border-brand-cyan/60 text-slate-200 text-xs sm:text-sm font-medium transition duration-200 flex items-start gap-3 group cursor-pointer`;
         
         optionBtn.innerHTML = `
           <span class="h-6 w-6 rounded-lg bg-brand-petroleumLight border border-brand-borderDark flex items-center justify-center font-mono font-bold text-xs text-brand-cyan group-hover:bg-brand-cyan group-hover:text-brand-petroleum transition shrink-0 mt-0.5">
@@ -1162,6 +1905,9 @@
 
       if (isCorrect) {
         state.score++;
+        soundFX.correct();
+      } else {
+        soundFX.incorrect();
       }
 
       state.userAnswers.push({
@@ -1175,7 +1921,7 @@
       const allButtons = optionsContainer.querySelectorAll('button');
       allButtons.forEach((btn, idx) => {
         btn.disabled = true;
-        btn.classList.remove('hover:bg-brand-petroleumCard', 'hover:border-brand-cyan/60');
+        btn.classList.remove('hover:bg-brand-petroleumCard', 'hover:border-brand-cyan/60', 'cursor-pointer');
 
         if (idx === qData.correctIndex) {
           // Opción Correcta (Verde brillante)
@@ -1222,6 +1968,7 @@
      * AVANZAR A LA SIGUIENTE PREGUNTA O FINALIZAR
      */
     btnNextQuestion.addEventListener('click', () => {
+      soundFX.click();
       if (state.currentQuestionIndex < state.triviaQuestions.length - 1) {
         state.currentQuestionIndex++;
         renderCurrentQuestion();
@@ -1236,16 +1983,17 @@
     async function finishTriviaAndSubmit() {
       showView('success');
 
-      // Lanzar Confeti Festivo
+      // Fanfarria Sonora & Confeti Festivo
+      soundFX.fanfare();
       try {
         confetti({
-          particleCount: 80,
-          spread: 70,
+          particleCount: 90,
+          spread: 75,
           origin: { y: 0.6 },
-          colors: ['#00f2fe', '#38bdf8', '#ffffff', '#facc15']
+          colors: ['#00f2fe', '#38bdf8', '#ffffff', '#facc15', '#10b981']
         });
       } catch (err) {
-        console.log("Confetti library loaded");
+        console.log("Confetti initialized");
       }
 
       // Llenar datos del ticket
@@ -1255,11 +2003,20 @@
       triviaScoreDisplay.textContent = `${state.score} de 3 Aciertos`;
 
       // Texto para copiar a Instagram
-      const suggestedComment = `¡Participando con AIC TECH en Venezuela Energética 2026! 🚀 Ticket: ${state.ticketCode}`;
+      const suggestedComment = `¡Participando con AIC TECH (Stand #5 • Patrocinante Premium) en Venezuela Energética 2026! 🚀 Ticket: ${state.ticketCode}`;
       commentToCopyEl.textContent = suggestedComment;
 
       // Enlace a Instagram
       btnInstagram.href = INSTAGRAM_POST_URL;
+
+      // Enlace a WhatsApp
+      const waMsg = encodeURIComponent(
+        `¡Hola! Estoy participando en el sorteo de AIC TECH (Patrocinante Premium • Stand #5) en Venezuela Energética 2026 por la estación de energía EcoFlow River 3 y la Tablet Compaq 12". Mi boleto oficial es: ${state.ticketCode}`
+      );
+      btnShareWhatsApp.href = `https://wa.me/?text=${waMsg}`;
+
+      // Iniciar Temporizador Kiosk para Stand (60 segundos)
+      startKioskTimer();
 
       // Preparar Payload para Google Apps Script
       const payload = {
@@ -1271,13 +2028,52 @@
         email: state.participant.email,
         empresa: state.participant.empresa,
         cargo: state.participant.cargo,
+        interesComercial: (state.participant.intereses && state.participant.intereses.length > 0) ? state.participant.intereses.join('; ') : 'General',
         scoreTrivia: `${state.score}/3`,
         detalleTrivia: JSON.stringify(state.userAnswers)
       };
 
+      // Respaldo Inmediato en Memoria Local (Offline Backup)
+      try {
+        const offlineList = JSON.parse(localStorage.getItem('aictech_concurso_offline') || '[]');
+        offlineList.push(payload);
+        localStorage.setItem('aictech_concurso_offline', JSON.stringify(offlineList));
+      } catch (storageErr) {
+        console.warn("Storage error:", storageErr);
+      }
+
       // Envío Asíncrono con fetch() a Google Apps Script
       sendDataToGoogleScript(payload);
     }
+
+    /**
+     * TEMPORIZADOR AUTOMÁTICO KIOSK PARA TABLETS DEL STAND
+     */
+    function startKioskTimer() {
+      if (state.kioskTimerId) clearInterval(state.kioskTimerId);
+      state.kioskSecondsLeft = 60;
+      state.isKioskPaused = false;
+      kioskCountdown.textContent = state.kioskSecondsLeft;
+      btnPauseKioskTimer.textContent = "Pausar Contador";
+
+      state.kioskTimerId = setInterval(() => {
+        if (!state.isKioskPaused) {
+          state.kioskSecondsLeft--;
+          kioskCountdown.textContent = state.kioskSecondsLeft;
+          if (state.kioskSecondsLeft <= 0) {
+            clearInterval(state.kioskTimerId);
+            state.kioskTimerId = null;
+            btnResetAll.click();
+          }
+        }
+      }, 1000);
+    }
+
+    btnPauseKioskTimer.addEventListener('click', () => {
+      soundFX.click();
+      state.isKioskPaused = !state.isKioskPaused;
+      btnPauseKioskTimer.textContent = state.isKioskPaused ? "Reanudar Contador" : "Pausar Contador";
+    });
 
     /**
      * FUNCIÓN ASÍNCRONA FETCH A GOOGLE APPS SCRIPT
@@ -1292,12 +2088,7 @@
       if (window.lucide) lucide.createIcons();
 
       try {
-        /**
-         * Nota técnica: Para Google Apps Script Web App desplegado,
-         * habitualmente se usa mode: 'no-cors' con POST para evitar bloqueos
-         * de preflight CORS en navegadores cliente, o llamadas POST estándar.
-         */
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
+        await fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: {
@@ -1306,7 +2097,6 @@
           body: JSON.stringify(data)
         });
 
-        // Al usar no-cors la respuesta es opaca pero el POST se procesa en Google Sheets
         syncStatus.className = "p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/50 flex items-center justify-center gap-2 text-xs font-mono text-emerald-300";
         syncStatus.innerHTML = `
           <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
@@ -1314,19 +2104,10 @@
         `;
       } catch (error) {
         console.warn("Aviso de sincronización:", error);
-        // Respaldo visual amigable: los datos se guardan en localStorage
-        try {
-          const offlineList = JSON.parse(localStorage.getItem('aictech_concurso_offline') || '[]');
-          offlineList.push(data);
-          localStorage.setItem('aictech_concurso_offline', JSON.stringify(offlineList));
-        } catch (storageErr) {
-          console.error(storageErr);
-        }
-
         syncStatus.className = "p-3 rounded-xl bg-cyan-950/80 border border-cyan-400/40 flex items-center justify-center gap-2 text-xs font-mono text-cyan-200";
         syncStatus.innerHTML = `
           <i data-lucide="shield-check" class="w-4 h-4 text-brand-cyan"></i>
-          <span>¡Boleto ${state.ticketCode} registrado y respaldado en el stand!</span>
+          <span>¡Boleto ${state.ticketCode} respaldado con seguridad en este dispositivo!</span>
         `;
       }
 
@@ -1336,26 +2117,141 @@
     /**
      * COPIAR COMENTARIO AL PORTAPAPELES
      */
-    btnCopyComment.addEventListener('click', async () => {
+    async function executeCopy() {
+      soundFX.click();
       const text = commentToCopyEl.textContent.trim();
       try {
         await navigator.clipboard.writeText(text);
-        copyFeedback.textContent = "¡Copiado!";
-        btnCopyComment.classList.add('bg-pink-500', 'text-white');
-        setTimeout(() => {
-          copyFeedback.textContent = "Copiar";
-          btnCopyComment.classList.remove('bg-pink-500', 'text-white');
-        }, 2500);
       } catch (err) {
-        // Fallback básico
         const textArea = document.createElement("textarea");
         textArea.value = text;
+        textArea.style.position = "fixed";
+        textArea.style.opacity = "0";
         document.body.appendChild(textArea);
+        textArea.focus();
         textArea.select();
-        document.execCommand("copy");
+        try {
+          document.execCommand("copy");
+        } catch (e) {
+          console.error(e);
+        }
         document.body.removeChild(textArea);
-        copyFeedback.textContent = "¡Copiado!";
-        setTimeout(() => { copyFeedback.textContent = "Copiar"; }, 2500);
+      }
+
+      copyFeedback.textContent = "✓ ¡TEXTO COPIADO! AHORA HAZ CLIC EN EL PASO 2";
+      btnCopyComment.className = "w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm font-mono flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition-all cursor-pointer";
+      
+      setTimeout(() => {
+        copyFeedback.textContent = "COPIAR TEXTO AL PORTAPAPELES";
+        btnCopyComment.className = "w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-500 hover:to-rose-400 active:scale-[0.99] text-white font-extrabold text-xs sm:text-sm font-mono flex items-center justify-center gap-2 shadow-lg shadow-pink-600/30 transition-all cursor-pointer";
+      }, 3500);
+    }
+
+    btnCopyComment.addEventListener('click', executeCopy);
+    commentToCopyEl.addEventListener('click', executeCopy);
+
+    /**
+     * CONTROL DE SONIDO ON / OFF
+     */
+    btnSoundToggle.addEventListener('click', () => {
+      soundFX.enabled = !soundFX.enabled;
+      if (soundFX.enabled) {
+        soundIcon.setAttribute('data-lucide', 'volume-2');
+        btnSoundToggle.classList.remove('opacity-60');
+        soundFX.click();
+      } else {
+        soundIcon.setAttribute('data-lucide', 'volume-x');
+        btnSoundToggle.classList.add('opacity-60');
+      }
+      if (window.lucide) lucide.createIcons();
+    });
+
+    /**
+     * MODAL CÓDIGO QR MÓVIL
+     */
+    function openQRModal() {
+      soundFX.click();
+      const currentUrl = window.location.href.split('#')[0];
+      qrCodeImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=8&data=${encodeURIComponent(currentUrl)}`;
+      modalQR.classList.remove('hidden');
+    }
+
+    btnQRToggle.addEventListener('click', openQRModal);
+    btnHeroQR.addEventListener('click', openQRModal);
+    btnCloseQR.addEventListener('click', () => modalQR.classList.add('hidden'));
+    btnCloseQRBottom.addEventListener('click', () => modalQR.classList.add('hidden'));
+    modalQR.addEventListener('click', (e) => {
+      if (e.target === modalQR) modalQR.classList.add('hidden');
+    });
+
+    /**
+     * TRIGGER SECRETO: PANEL ADMINISTRADOR AL CLICKEAR 3 VECES EL LOGO DE AIC TECH
+     */
+    let logoClicks = 0;
+    let logoTimer = null;
+    logoAdminTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      logoClicks++;
+      clearTimeout(logoTimer);
+      logoTimer = setTimeout(() => { logoClicks = 0; }, 1200);
+
+      if (logoClicks >= 3) {
+        logoClicks = 0;
+        soundFX.fanfare();
+        openAdminModal();
+      }
+    });
+
+    function openAdminModal() {
+      const offlineList = JSON.parse(localStorage.getItem('aictech_concurso_offline') || '[]');
+      adminOfflineCount.textContent = offlineList.length;
+      modalAdmin.classList.remove('hidden');
+    }
+
+    btnCloseAdmin.addEventListener('click', () => modalAdmin.classList.add('hidden'));
+    modalAdmin.addEventListener('click', (e) => {
+      if (e.target === modalAdmin) modalAdmin.classList.add('hidden');
+    });
+
+    // Descarga de CSV local
+    btnDownloadCSV.addEventListener('click', () => {
+      soundFX.click();
+      const offlineList = JSON.parse(localStorage.getItem('aictech_concurso_offline') || '[]');
+      if (offlineList.length === 0) {
+        alert("No hay registros en la memoria local aún.");
+        return;
+      }
+
+      const headers = ["Fecha Local", "Ticket", "Nombre", "Teléfono", "Email", "Empresa", "Cargo", "Intereses", "Puntaje"];
+      const rows = offlineList.map(item => [
+        `"${item.fechaLocal || ''}"`,
+        `"${item.ticketCode || ''}"`,
+        `"${(item.nombre || '').replace(/"/g, '""')}"`,
+        `"${item.telefono || ''}"`,
+        `"${item.email || ''}"`,
+        `"${(item.empresa || '').replace(/"/g, '""')}"`,
+        `"${(item.cargo || '').replace(/"/g, '""')}"`,
+        `"${(item.interesComercial || '').replace(/"/g, '""')}"`,
+        `"${item.scoreTrivia || ''}"`
+      ]);
+
+      const csvContent = "\uFEFF" + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `registros_stand_aictech_eve2026_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    // Limpiar datos locales
+    btnClearOfflineData.addEventListener('click', () => {
+      if (confirm("¿Estás seguro de que deseas limpiar la memoria local de este dispositivo?")) {
+        localStorage.removeItem('aictech_concurso_offline');
+        adminOfflineCount.textContent = '0';
+        alert("Memoria local liberada.");
       }
     });
 
@@ -1363,24 +2259,32 @@
      * INTERACCIONES DE BOTONES DE NAVEGACIÓN
      */
     btnStart.addEventListener('click', () => {
+      soundFX.click();
       showView('form');
     });
 
     btnBackToHero.addEventListener('click', () => {
+      soundFX.click();
       showView('hero');
     });
 
     btnResetAll.addEventListener('click', () => {
+      soundFX.click();
       participantForm.reset();
       showView('hero');
     });
 
     // Modal de Bases
-    btnRulesToggle.addEventListener('click', () => modalRules.classList.remove('hidden'));
+    btnRulesToggle.addEventListener('click', () => {
+      soundFX.click();
+      modalRules.classList.remove('hidden');
+    });
     btnCloseRules.addEventListener('click', () => modalRules.classList.add('hidden'));
-    btnUnderstandRules.addEventListener('click', () => modalRules.classList.add('hidden'));
+    btnUnderstandRules.addEventListener('click', () => {
+      soundFX.click();
+      modalRules.classList.add('hidden');
+    });
 
-    // Cerrar modal al tocar fondo
     modalRules.addEventListener('click', (e) => {
       if (e.target === modalRules) {
         modalRules.classList.add('hidden');
